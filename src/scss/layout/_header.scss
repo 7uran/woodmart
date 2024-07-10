@@ -1,23 +1,53 @@
 @import "../utils/mixins";
 @import "../utils/variables";
 
+@keyframes downToUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
 
+    100% {
+        transform: translateY(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes upToDown {
+    0% {
+
+        transform: translateY(0);
+        opacity: 100%;
+        
+    }
+
+    100% {
+      transform: translateY(20px);
+        opacity: 0;
+    }
+}
 
 header {
+    position: relative;
     padding: 2.5% 5%;
+
     @media only screen and (min-width: 1200px) {
         padding: 0 11%;
     }
+
     @include flex(row, space-between, center);
 
-    font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
-    
+    font-family: "SatoshiVariable",
+    Arial,
+    Helvetica,
+    sans-serif;
+
 
     .header-main {
         @include flex(row, space-between, center);
         width: 100%;
-        border-bottom: 2px solid $border_color;
-        padding: 2.5% 0;
+        border-bottom: 2px solid $main_color;
+        padding: 1% 0;
         color: #333;
     }
 
@@ -33,9 +63,10 @@ header {
             li {
                 cursor: pointer;
                 transition: 300ms;
+                padding: 5% 0;
 
                 &:hover {
-                    color: $border_color;
+                    color: $main_color;
                 }
             }
 
@@ -79,15 +110,62 @@ header {
 }
 
 .shop-li {
-    position: relative;
+
+    &:hover .dropdown {
+        display: block;
+        animation: downToUp 0.2s ease-in-out;
+    }
+
+    &:not(:hover) .dropdown {
+        animation-direction: reverse;
+        animation: downToUp 0.2s ease-in-out;
+       
+    }
+
     .dropdown {
-        height: 100px;
+        display: flex;
+        padding: 2% 15%;
         width: 100%;
+        margin-top: 1%;
+        left: 0;
         position: absolute;
-        background-color: red;
-        left: 0; 
-        right: 0;
-        display: none;
         z-index: 1000;
+        background-color: white;
+        display: none;
+        flex-direction: row;
+
+    }
+}
+
+.dropdown-card-main {
+    @include flex(row, null, center);
+    gap: 150px;
+}
+
+.dropdown-card {
+    @include flex(column, null, center);
+    gap: 10px;
+
+    p {
+        color: black;
+        font-family: "ClashDisplay-Regular";
+        font-weight: 500;
+    }
+
+    .img-div {
+        overflow: hidden;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    img {
+        transition: 400ms;
+        width: 80px;
+        border-radius: 50%;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }

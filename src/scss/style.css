@@ -8,7 +8,28 @@ body {
   background-color: #F6F3ED;
 }
 
+@keyframes downToUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+@keyframes upToDown {
+  0% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
 header {
+  position: relative;
   padding: 2.5% 5%;
   display: flex;
   flex-direction: row;
@@ -28,7 +49,7 @@ header .header-main {
   align-items: center;
   width: 100%;
   border-bottom: 2px solid #5E6821;
-  padding: 2.5% 0;
+  padding: 1% 0;
   color: #333;
 }
 header .header-left {
@@ -45,6 +66,7 @@ header .header-left ul {
 header .header-left ul li {
   cursor: pointer;
   transition: 300ms;
+  padding: 5% 0;
 }
 header .header-left ul li:hover {
   color: #5E6821;
@@ -81,18 +103,58 @@ header .header-right div:hover {
   color: gray;
 }
 
-.shop-li {
-  position: relative;
+.shop-li:hover .dropdown {
+  display: block;
+  animation: downToUp 0.2s ease-in-out;
+}
+.shop-li:not(:hover) .dropdown {
+  animation-direction: reverse;
+  animation: downToUp 0.2s ease-in-out;
 }
 .shop-li .dropdown {
-  height: 100px;
+  display: flex;
+  padding: 2% 15%;
   width: 100%;
-  position: absolute;
-  background-color: red;
+  margin-top: 1%;
   left: 0;
-  right: 0;
-  display: none;
+  position: absolute;
   z-index: 1000;
+  background-color: white;
+  display: none;
+  flex-direction: row;
+}
+
+.dropdown-card-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 150px;
+}
+
+.dropdown-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.dropdown-card p {
+  color: black;
+  font-family: "ClashDisplay-Regular";
+  font-weight: 500;
+}
+.dropdown-card .img-div {
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.dropdown-card img {
+  transition: 400ms;
+  width: 80px;
+  border-radius: 50%;
+}
+.dropdown-card img:hover {
+  transform: scale(1.1);
 }
 
 @font-face {
@@ -172,6 +234,13 @@ header .header-right div:hover {
   width: fit-content;
   height: 100%;
 }
+.intro-main .intro-left p {
+  cursor: pointer;
+  transition: 300ms;
+}
+.intro-main .intro-left p:hover {
+  color: #5E6821;
+}
 .intro-main .intro-left i {
   transform: rotate(-45deg);
 }
@@ -192,23 +261,77 @@ header .header-right div:hover {
 }
 
 .swiper {
+  cursor: grab;
   width: 72%;
   height: 600px;
+}
+
+.swiper1 {
+  background-image: url("https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-slide-2-opt.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper2 {
+  background-image: url("https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-slide-3-opt-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper3 {
+  background-image: url("https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-slide-1-opt-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
+.swiper-slide .info {
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  color: white;
+  text-align: left;
+  background-color: transparent;
+  padding: 4%;
+  gap: 20px;
+}
+.swiper-slide .info h1 {
+  font-family: "ClashDisplay-Regular";
+  font-weight: 600;
+  font-size: 36px;
+  width: 48%;
+}
+.swiper-slide .info h3 {
+  font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 50%;
+  font-weight: 300;
+}
+.swiper-slide .info button {
+  padding: 1.5% 1.8%;
+  background-color: #5E6821;
+  color: white;
+  border: none;
+  transition: 300ms;
+  cursor: pointer;
+}
+.swiper-slide .info button:hover {
+  background-color: #495019;
+}
+.swiper-slide .info p {
+  font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+}
+.swiper-slide .info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
