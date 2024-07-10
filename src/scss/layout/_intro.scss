@@ -1,0 +1,44 @@
+.intro-div {
+    background-color: red;
+    padding: 2.5% 4%;
+    @include flex(row, "", center);
+
+    .intro-left {
+        font-size: xx-large;
+        font-family: "ClashDisplay", Arial, Helvetica, sans-serif;
+        @include flex(column);
+        gap: 45px;
+
+        i {
+            transform: rotate(-45deg);
+
+        }
+    }
+
+    .intro-right {
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

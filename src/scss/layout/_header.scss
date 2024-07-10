@@ -5,7 +5,7 @@
 
 header {
     @include flex(row, space-between, center);
-    
+
     font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
     padding: 0 4%;
 
@@ -13,7 +13,7 @@ header {
         @include flex(row, space-between, center);
         width: 100%;
         border-bottom: 2px solid $border_color;
-        padding: 2% 0;
+        padding: 2.5% 0;
         color: #333;
     }
 
@@ -24,10 +24,17 @@ header {
         ul {
             @include flex(row, center, center);
             list-style: none;
-            gap: 28px;
-li{
-    cursor: pointer;
-}
+            gap: 25px;
+
+            li {
+                cursor: pointer;
+                transition: 300ms;
+
+                &:hover {
+                    color: $border_color;
+                }
+            }
+
             i {
                 color: gray;
             }
@@ -37,20 +44,45 @@ li{
     .header-mid {
 
         img {
-            width: 200px
+            width: 200px;
+            cursor: pointer;
         }
     }
 
     .header-right {
         justify-self: flex-end;
         @include flex(row, center, center);
-        gap: 10px;
+        gap: 25px;
         width: fit-content;
+
+        i {
+            font-size: large;
+
+        }
 
         div {
             @include flex(row, end, center);
             gap: 10px;
+            transition: 300ms;
+            cursor: pointer;
+
+            &:hover {
+                color: gray;
+            }
         }
     }
 
+}
+
+.shop-li {
+    position: relative;
+    .dropdown {
+        height: 100px;
+        width: 100vw;
+        position: absolute;
+        background-color: red;
+        left: 0; 
+        right: 0;
+        display: none;
+    }
 }
