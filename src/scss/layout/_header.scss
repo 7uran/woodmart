@@ -1,0 +1,56 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+
+
+header {
+    @include flex(row, space-between, center);
+    
+    font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+    padding: 0 4%;
+
+    .header-main {
+        @include flex(row, space-between, center);
+        width: 100%;
+        border-bottom: 2px solid $border_color;
+        padding: 2% 0;
+        color: #333;
+    }
+
+    .header-left {
+
+        justify-self: flex-start;
+
+        ul {
+            @include flex(row, center, center);
+            list-style: none;
+            gap: 28px;
+li{
+    cursor: pointer;
+}
+            i {
+                color: gray;
+            }
+        }
+    }
+
+    .header-mid {
+
+        img {
+            width: 200px
+        }
+    }
+
+    .header-right {
+        justify-self: flex-end;
+        @include flex(row, center, center);
+        gap: 10px;
+        width: fit-content;
+
+        div {
+            @include flex(row, end, center);
+            gap: 10px;
+        }
+    }
+
+}

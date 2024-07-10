@@ -1,0 +1,17 @@
+{
+  "name": "woodmart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "",
+    "watch":"sass --watch src/scss/style.scss:src/scss/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.1",
+    "nodemon": "^3.1.4",
+    "sass": "^1.77.7"
+  }
+}
