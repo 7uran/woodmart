@@ -1,13 +1,21 @@
-.intro-div {
-    background-color: red;
-    padding: 2.5% 4%;
-    @include flex(row, "", center);
+@import "../fonts/font";
+
+.intro-main {
+    color: $font_color;
+    border-bottom: 2px solid $border_color;
+    @include flex(row, space-between, center);
+
+    padding: 2% 0%;
 
     .intro-left {
         font-size: xx-large;
-        font-family: "ClashDisplay", Arial, Helvetica, sans-serif;
+        font-family: "ClashDisplay-Regular";
+        font-weight: 600;
         @include flex(column);
+        padding-right: 10%;
         gap: 45px;
+        width: fit-content;
+        height: 100%;
 
         i {
             transform: rotate(-45deg);
@@ -15,30 +23,46 @@
         }
     }
 
-    .intro-right {
-        position: relative;
-        margin: 0;
-        padding: 0;
 
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
 
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+}
 
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.intro-container {
+    padding: 0% 5%;
+
+    @media only screen and (min-width: 1200px) {
+        padding: 0% 11%;
     }
+
+}
+
+.vl {
+    height: 600px;
+    width: 2px;
+    background-color: $border_color;
+}
+
+.swiper {
+
+    width: 72%;
+    height: 600px;
+
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    // transform: scale(1);
+    width: 100%;
+    height: 100%;
+
 }

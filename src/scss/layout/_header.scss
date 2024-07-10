@@ -4,10 +4,14 @@
 
 
 header {
+    padding: 2.5% 5%;
+    @media only screen and (min-width: 1200px) {
+        padding: 0 11%;
+    }
     @include flex(row, space-between, center);
 
     font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
-    padding: 0 4%;
+    
 
     .header-main {
         @include flex(row, space-between, center);
@@ -78,11 +82,12 @@ header {
     position: relative;
     .dropdown {
         height: 100px;
-        width: 100vw;
+        width: 100%;
         position: absolute;
         background-color: red;
         left: 0; 
         right: 0;
         display: none;
+        z-index: 1000;
     }
 }
