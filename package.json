@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "",
-    "watch":"sass --watch src/scss/style.scss:src/scss/style.css"
+    "start": "json-server db.json --watch --port 8080",
+    "watch": "sass --watch src/scss/style.scss:src/scss/style.css"
   },
   "author": "",
   "license": "ISC",

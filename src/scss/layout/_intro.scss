@@ -1,11 +1,12 @@
 @import "../fonts/font";
-
+@import "../utils/extends";
 .intro-main {
     color: $font_color;
     border-bottom: 2px solid $main_color;
     @include flex(row, space-between, center);
-
     padding: 2% 0%;
+
+
 
     .intro-left {
         font-size: xx-large;
@@ -36,14 +37,7 @@
 
 }
 
-.intro-container {
-    padding: 0% 5%;
 
-    @media only screen and (min-width: 1200px) {
-        padding: 0% 11%;
-    }
-
-}
 
 .vl {
     height: 600px;
@@ -107,16 +101,17 @@
         }
 
         button {
-            padding: 1.5% 1.8%;
-            background-color: $main_color;
-            color: white;
-            border: none;
-            transition: 300ms;
-            cursor: pointer;
+            @extend .btn;
+            // padding: 1.5% 1.8%;
+            // background-color: $main_color;
+            // color: white;
+            // border: none;
+            // transition: 300ms;
+            // cursor: pointer;
 
-            &:hover {
-                background-color: #495019;
-            }
+            // &:hover {
+            //     background-color: #495019;
+            // }
         }
 
         p {

@@ -1,0 +1,77 @@
+@import "../utils/extends";
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: 11111;
+}
+
+.sidebar-top {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 0 25px;
+    width: 100%;
+    height: 70px;
+    @include flex(row, space-between, center);
+
+    p {
+        font-family: "ClashDisplay-Regular";
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.closebtn {
+    cursor: pointer;
+    @include flex(null, null, center);
+    gap: 5px;
+
+    i {
+        font-size: x-large;
+    }
+
+    span {
+        font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+        font-weight: 500;
+    }
+}
+
+
+.sidebar-empty {
+
+    width: 100%;
+    height: 250px;
+    @include flex(column, center, center);
+    gap: 18px;
+
+    i {
+        font-size: 80px;
+        color: #e3e3e3;
+    }
+
+    p {
+        font-family: "ClashDisplay-Regular";
+        font-weight: 600;
+    }
+
+    
+}
+
+.return-btn {
+    padding: 1.5% 1.8%;
+    background-color: $main_color;
+    color: white;
+    border: none;
+    transition: 300ms;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #495019;
+    }
+}   

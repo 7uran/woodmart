@@ -1,0 +1,25 @@
+.btn {
+    padding: 1.5% 1.8%;
+    background-color: $main_color;
+    color: white;
+    border: none;
+    transition: 300ms;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #495019;
+    }
+}
+
+.card-btn {
+    padding: 4% 5%;
+    background-color: $main_color;
+    color: white;
+    border: none;
+    transition: 300ms;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #495019;
+    }
+}

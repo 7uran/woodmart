@@ -26,37 +26,41 @@
                             <div class="dropdown-card-main">
                                 <div class="dropdown-card">
                                     <div class="img-div"><img
-                                        src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-plants.jpg.webp"></div>
-                                    
+                                            src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-plants.jpg.webp">
+                                    </div>
+
                                     <p>Plants</p>
                                     <span>25 products</span>
                                 </div>
                                 <div class="dropdown-card">
                                     <div class="img-div">
-                                    <img
-                                        src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-planters.jpg.webp">
-                                        </div>
+                                        <img
+                                            src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-planters.jpg.webp">
+                                    </div>
                                     <p>Planters</p>
                                     <span>12 products</span>
                                 </div>
                                 <div class="dropdown-card">
                                     <div class="img-div">
-                                    <img
-                                        src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-plant-care.jpg.webp"></div>
+                                        <img
+                                            src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-plant-care.jpg.webp">
+                                    </div>
                                     <p>Plant care</p>
                                     <span>12 products</span>
                                 </div>
                                 <div class="dropdown-card">
                                     <div class="img-div">
-                                    <img
-                                        src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-pet-friendly.jpg.webp"></div>
+                                        <img
+                                            src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-pet-friendly.jpg.webp">
+                                    </div>
                                     <p>Pet friendly</p>
                                     <span>12 products</span>
                                 </div>
                                 <div class="dropdown-card">
                                     <div class="img-div">
-                                    <img
-                                        src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-gift-ideas.jpg.webp"></div>
+                                        <img
+                                            src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-ps-categorie-gift-ideas.jpg.webp">
+                                    </div>
                                     <p>Gift ideas</p>
                                     <span>12 products</span>
                                 </div>
@@ -86,7 +90,7 @@
                     <i class="fa-regular fa-heart"></i>
                     <p>0</p>
                 </div>
-                <div>
+                <div class="openbtn">
                     <i class="fa-solid fa-bag-shopping"></i>
                     <p>
                         <span>0</span>
@@ -99,6 +103,25 @@
     </header>
 
     <main>
+        <section>
+            <div id="mySidebar" class="sidebar">
+                <div class="sidebar-top">
+                    <p>Shopping cart</p>
+                    <div class="closebtn"><i class="fa-solid fa-xmark "></i><span>Close</span></div>
+                </div>
+                <div class="sidebar-empty">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <p>No products in the cart.</p>
+                    <button class="return-btn">Return To Shop</button>
+                </div>
+
+
+
+            </div>
+        </section>
+
         <section>
             <div class="intro-container">
                 <div class="intro-main">
@@ -147,18 +170,71 @@
             </div>
         </section>
 
-        <section>
+        <section class="card-section">
             <div>
                 <h1>Most popular products</h1>
             </div>
-            <div class="card-main-div">
-                <div class="card">
 
-                </div>
+
+            <div class="card-main-div">
+                <!-- db.json'dan gelir-->
             </div>
 
         </section>
+        <section>
+            <div class="shopping-div">
+                <div class="shopping-top">
+                    <p>Shopping by size</p>
+                </div>
+                <div class="shopping-bottom">
+                    <div class="video-card">
+                        <video
+                            src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/plants-banners-video-1-1.mp4 "
+                            autoplay="" muted="" loop="" playsinline=""
+                            poster="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/plants-banners-image-1.jpg"></video>
+                        <div class="caption">
+                            <span>1 - 2ft.</span>
+                            <p>Small plants</p>
+                            <a>Shop now</a>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <video
+                            src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/plants-banners-video-2-1.mp4 "
+                            autoplay="" muted="" loop="" playsinline=""
+                            poster="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/plants-banners-image-2.jpg"></video>
+                        <div class="caption">
+                            <span>2 - 3ft.</span>
+                            <p>Medium plants</p>
+                            <a>Shop now</a>
+                        </div>
+                    </div>
 
+                    <div class="video-card">
+                        <video
+                            src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/plants-banners-video-3-1.mp4 "
+                            autoplay="" muted="" loop="" playsinline=""
+                            poster="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/plants-banners-image-3.jpg"></video>
+                        <div class="caption">
+                            <span>5+ ft.</span>
+                            <p>Large plants</p>
+                            <a>Shop now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="explore-div">
+                <p>Explore our<img
+                        src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/ps-top-min-1.png">
+                    extensive range of plants <img
+                        src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/ps-top-min-2.png">
+                    for <img
+                        src="https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/ps-top-min-3.png">your
+                    room.</p>
+            </div>
+        </section>
     </main>
 </body>
 

@@ -1,0 +1,47 @@
+.dropdown {
+    display: flex;
+    padding: 2% 15%;
+    width: 100%;
+    margin-top: 1%;
+    left: 0;
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    display: none;
+    flex-direction: row;
+
+}
+
+
+.dropdown-card-main {
+    @include flex(row, null, center);
+    gap: 150px;
+}
+
+.dropdown-card {
+    @include flex(column, null, center);
+    gap: 10px;
+
+    p {
+        color: black;
+        font-family: "ClashDisplay-Regular";
+        font-weight: 500;
+    }
+
+    .img-div {
+        overflow: hidden;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    img {
+        transition: 400ms;
+        width: 80px;
+        border-radius: 50%;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
