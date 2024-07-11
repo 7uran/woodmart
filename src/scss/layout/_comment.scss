@@ -1,0 +1,82 @@
+@import "../utils/variables";
+
+.comment-div {
+    padding: 6% 0;
+    width: 100%;
+    margin-top: -180px;
+    @include flex(row, space-between);
+
+}
+
+.comment-left-top {
+    padding-bottom: 50px;
+    border-bottom: 2px solid $main_color;
+}
+
+.comment-left {
+    background-color: #E7E5D9;
+    width: 530px;
+    height: 450px;
+    padding: 4% 3%;
+
+    p {
+        font-family: "ClashDisplay-Regular";
+        font-weight: 600;
+        font-size: 38px;
+    }
+}
+
+.comment-left-bottom {
+    @include flex(row, start, center);
+    padding: 5% 0;
+    gap: 20px;
+    font-family: "ClashDisplay-Regular";
+    margin-top: 20px;
+
+    h3 {
+        font-size: x-large;
+    }
+
+    span {
+        color: gray;
+    }
+}
+
+.comment-right {
+    width: fit-content;
+    position: relative;
+
+    div {
+        @include flex(null, center, center);
+    }
+
+
+    img {
+        width: 720px;
+        height: 450px;
+
+    }
+
+    button {
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 2px solid rgb(157, 157, 157);
+        cursor: pointer;
+
+        &:hover i {
+            transform: scale(0.9);
+            color: rgb(182, 182, 182);
+
+        }
+
+        i {
+            font-size: xx-large;
+            color: rgb(204, 204, 204);
+            transition: 300ms;
+        }
+
+    }
+}
