@@ -22,26 +22,6 @@ section {
   }
 }
 
-@keyframes downToUp {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 100%;
-  }
-}
-@keyframes upToDown {
-  0% {
-    transform: translateY(0);
-    opacity: 100%;
-  }
-  100% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-}
 @media only screen and (min-width: 1200px) {
   header {
     padding: 0 11%;
@@ -50,14 +30,6 @@ section {
 @media only screen and (min-width: 992px) {
   header {
     padding: 0 4%;
-  }
-}
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-  }
-  to {
-    transform: translateY(0);
   }
 }
 .is-sticky {
@@ -147,12 +119,9 @@ header .header-right div:hover {
 }
 
 .shop-li:hover .dropdown {
-  display: block;
-  animation: downToUp 0.2s ease-in-out;
-}
-.shop-li:not(:hover) .dropdown {
-  animation-direction: reverse;
-  animation: downToUp 0.2s ease-in-out;
+  visibility: visible;
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 @font-face {
@@ -458,6 +427,7 @@ header .header-right div:hover {
 
 .dropdown {
   display: flex;
+  visibility: hidden;
   padding: 2% 15%;
   width: 100%;
   margin-top: 1%;
@@ -465,8 +435,10 @@ header .header-right div:hover {
   position: absolute;
   z-index: 1000;
   background-color: white;
-  display: none;
   flex-direction: row;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 300ms;
 }
 
 .dropdown-card-main {

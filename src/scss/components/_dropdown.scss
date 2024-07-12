@@ -1,5 +1,6 @@
 .dropdown {
     display: flex;
+    visibility: hidden;
     padding: 2% 15%;
     width: 100%;
     margin-top: 1%;
@@ -7,9 +8,10 @@
     position: absolute;
     z-index: 1000;
     background-color: white;
-    display: none;
     flex-direction: row;
-
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 300ms;
 }
 
 
