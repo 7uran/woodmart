@@ -1,31 +1,7 @@
 @import "../utils/mixins";
 @import "../utils/variables";
 
-// @keyframes downToUp {
-//     0% {
-//         transform: translateY(20px);
-//         opacity: 0;
-//     }
 
-//     100% {
-//         transform: translateY(0);
-//         opacity: 100%;
-//     }
-// }
-
-// @keyframes upToDown {
-//     0% {
-
-//         transform: translateY(0);
-//         opacity: 100%;
-
-//     }
-
-//     100% {
-//         transform: translateY(20px);
-//         opacity: 0;
-//     }
-// }
 
 @media only screen and (min-width: 1200px) {
     header {
@@ -45,15 +21,7 @@
 
 ;
 
-// @keyframes slideDown {
-//     from {
-//         transform: translateY(-100%);
-//     }
 
-//     to {
-//         transform: translateY(0);
-//     }
-// }
 
 .is-sticky {
     position: fixed;
@@ -159,7 +127,4 @@ header {
         transform: translateY(0px);
         opacity: 1;
     }
-
-
-
 }
