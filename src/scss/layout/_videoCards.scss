@@ -45,7 +45,7 @@
     text-align: start;
     @include flex(column);
     gap: 20px;
-    font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+    font-family: 'Satoshi-Variable';
 
     span {
         color: rgba(255, 255, 255, 0.6);

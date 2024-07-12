@@ -16,7 +16,7 @@
             }
 
             span {
-                font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+                font-family: 'Satoshi-Variable';
                 color: gray;
                 font-size: 16px;
             }
@@ -27,7 +27,7 @@
                 @extend .btn;
                 width: 70px;
                 padding: 12% 10%;
-                font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+                font-family: 'Satoshi-Variable';
             }
         }
     }
@@ -105,7 +105,7 @@
             font-family: "ClashDisplay-Regular";
         }
         span{
-            font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+            font-family: 'Satoshi-Variable';
             color: $main_color;
         }
         button {

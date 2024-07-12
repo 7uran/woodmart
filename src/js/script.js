@@ -35,7 +35,6 @@ const move = (e) => {
   slider.scrollLeft = scrollLeft - scroll;
 }
 
-// Add the event listeners
 slider.addEventListener('mousemove', move, false);
 slider.addEventListener('mousedown', startDragging, false);
 slider.addEventListener('mouseup', stopDragging, false);
@@ -58,6 +57,31 @@ document.querySelector(".closebtn").addEventListener("click", () => {
   document.querySelector("#mySidebar").style.width = "0";
 
 })
+
+
+let btn = document.querySelector(".scrollBtn");
+
+
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    btn.style.visibility = "visible";
+    btn.style.transform = "translateX(0)"
+  } else {
+    btn.style.visibility = "hidden";
+    btn.style.transform = "translateX(100px)"
+  }
+}
+
+
+
+btn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+})
+
+
 
 
 const BASE_URL = "http://localhost:8080";

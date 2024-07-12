@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -8,7 +9,13 @@ body {
   background-color: #F6F3ED;
 }
 
-main, header {
+html {
+  scroll-behavior: smooth;
+}
+
+main,
+footer,
+.header-main {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
@@ -16,16 +23,6 @@ main, header {
 
 section {
   padding: 0% 5%;
-}
-@media only screen and (min-width: 1200px) {
-  section {
-    padding: 0% 11%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  section {
-    padding: 0 8%;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -61,7 +58,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+  font-family: "Satoshi-Variable";
 }
 header .header-main {
   display: flex;
@@ -173,13 +170,13 @@ header .header-right div:hover {
   font-style: normal;
 }
 /**
-* This is a variable font
-* You can control variable axes as shown below:
-* font-variation-settings: wght 700.0;
-*
-* available axes:
-'wght' (range from 200.0 to 700.0
-*/
+  * This is a variable font
+  * You can control variable axes as shown below:
+  * font-variation-settings: wght 700.0;
+  *
+  * available axes:
+  'wght' (range from 200.0 to 700.0
+  */
 @font-face {
   font-family: "ClashDisplay-Variable";
   src: url("../fonts/ClashDisplay-Variable.woff2") format("woff2"), url("../fonts/ClashDisplay-Variable.woff") format("woff"), url("../fonts/ClashDisplay-Variable.ttf") format("truetype");
@@ -187,7 +184,130 @@ header .header-right div:hover {
   font-display: swap;
   font-style: normal;
 }
-.btn, .products-div .products-top .products-top-right button, .swiper-slide .info button {
+/**
+* @license
+*
+* Font Family: Satoshi
+* Designed by: Deni Anggara
+* URL: https://www.fontshare.com/fonts/satoshi
+* © 2024 Indian Type Foundry
+*
+* Satoshi Light 
+* Satoshi LightItalic 
+* Satoshi Regular 
+* Satoshi Italic 
+* Satoshi Medium 
+* Satoshi MediumItalic 
+* Satoshi Bold 
+* Satoshi BoldItalic 
+* Satoshi Black 
+* Satoshi BlackItalic 
+* Satoshi Variable (Variable font)
+* Satoshi VariableItalic (Variable font)
+
+*
+*/
+@font-face {
+  font-family: "Satoshi-Light";
+  src: url("../fonts/Satoshi-Light.woff2") format("woff2"), url("../fonts/Satoshi-Light.woff") format("woff"), url("../fonts/Satoshi-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-LightItalic";
+  src: url("../fonts/Satoshi-LightItalic.woff2") format("woff2"), url("../fonts/Satoshi-LightItalic.woff") format("woff"), url("../fonts/Satoshi-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("../fonts/Satoshi-Regular.woff2") format("woff2"), url("../fonts/Satoshi-Regular.woff") format("woff"), url("../fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Italic";
+  src: url("../fonts/Satoshi-Italic.woff2") format("woff2"), url("../fonts/Satoshi-Italic.woff") format("woff"), url("../fonts/Satoshi-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("../fonts/Satoshi-Medium.woff2") format("woff2"), url("../fonts/Satoshi-Medium.woff") format("woff"), url("../fonts/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-MediumItalic";
+  src: url("../fonts/Satoshi-MediumItalic.woff2") format("woff2"), url("../fonts/Satoshi-MediumItalic.woff") format("woff"), url("../fonts/Satoshi-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("../fonts/Satoshi-Bold.woff2") format("woff2"), url("../fonts/Satoshi-Bold.woff") format("woff"), url("../fonts/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BoldItalic";
+  src: url("../fonts/Satoshi-BoldItalic.woff2") format("woff2"), url("../fonts/Satoshi-BoldItalic.woff") format("woff"), url("../fonts/Satoshi-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Black";
+  src: url("../fonts/Satoshi-Black.woff2") format("woff2"), url("../fonts/Satoshi-Black.woff") format("woff"), url("../fonts/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BlackItalic";
+  src: url("../fonts/Satoshi-BlackItalic.woff2") format("woff2"), url("../fonts/Satoshi-BlackItalic.woff") format("woff"), url("../fonts/Satoshi-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+/**
+   * This is a variable font
+   * You can control variable axes as shown below:
+   * font-variation-settings: wght 900.0;
+   *
+   * available axes:
+   'wght' (range from 300.0 to 900.0
+   */
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../fonts/Satoshi-Variable.woff2") format("woff2"), url("../fonts/Satoshi-Variable.woff") format("woff"), url("../fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+   * This is a variable font
+   * You can control variable axes as shown below:
+   * font-variation-settings: wght 900.0;
+   *
+   * available axes:
+   'wght' (range from 300.0 to 900.0
+   */
+@font-face {
+  font-family: "Satoshi-VariableItalic";
+  src: url("../fonts/Satoshi-VariableItalic.woff2") format("woff2"), url("../fonts/Satoshi-VariableItalic.woff") format("woff"), url("../fonts/Satoshi-VariableItalic.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .swiper-slide .info button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -195,7 +315,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
+.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
   background-color: #495019;
 }
 
@@ -297,13 +417,13 @@ header .header-right div:hover {
   width: 48%;
 }
 .swiper-slide .info h3 {
-  font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+  font-family: "Satoshi-Variable";
   font-size: 16px;
   width: 50%;
   font-weight: 300;
 }
 .swiper-slide .info p {
-  font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+  font-family: "Satoshi-Variable";
 }
 .swiper-slide .info div {
   display: flex;
@@ -311,7 +431,7 @@ header .header-right div:hover {
   gap: 10px;
 }
 
-.btn, .products-div .products-top .products-top-right button, .swiper-slide .info button {
+.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .swiper-slide .info button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -319,7 +439,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
+.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
   background-color: #495019;
 }
 
@@ -480,7 +600,7 @@ header .header-right div:hover {
   transform: scale(1.1);
 }
 
-.btn, .products-div .products-top .products-top-right button, .swiper-slide .info button {
+.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .swiper-slide .info button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -488,7 +608,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
+.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
   background-color: #495019;
 }
 
@@ -619,7 +739,7 @@ header .header-right div:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+  font-family: "Satoshi-Variable";
 }
 .video-card .caption span {
   color: rgba(255, 255, 255, 0.6);
@@ -666,7 +786,7 @@ header .header-right div:hover {
 
 .comment-left {
   background-color: #E7E5D9;
-  width: 530px;
+  width: fit-content;
   height: 450px;
   padding: 4% 3%;
 }
@@ -725,7 +845,7 @@ header .header-right div:hover {
   transition: 300ms;
 }
 
-.btn, .products-div .products-top .products-top-right button, .swiper-slide .info button {
+.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .swiper-slide .info button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -733,7 +853,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
+.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
   background-color: #495019;
 }
 
@@ -764,14 +884,14 @@ header .header-right div:hover {
   font-family: "ClashDisplay-Regular";
 }
 .products-div .products-top .products-top-left span {
-  font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+  font-family: "Satoshi-Variable";
   color: gray;
   font-size: 16px;
 }
 .products-div .products-top .products-top-right button {
   width: 70px;
   padding: 12% 10%;
-  font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+  font-family: "Satoshi-Variable";
 }
 
 .products-bottom {
@@ -829,7 +949,7 @@ header .header-right div:hover {
   font-family: "ClashDisplay-Regular";
 }
 .product-card .product-card-bottom span {
-  font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+  font-family: "Satoshi-Variable";
   color: #5E6821;
 }
 .product-card .product-card-bottom {
@@ -867,6 +987,284 @@ header .header-right div:hover {
 }
 .product-action-div button i {
   font-size: large;
+}
+
+.articles-main {
+  border-bottom: 2px solid #5E6821;
+}
+.articles-main .article-top {
+  border-bottom: 2px solid #5E6821;
+  padding: 2% 0;
+}
+.articles-main .article-top h2 {
+  font-family: "ClashDisplay-Regular";
+}
+.articles-main .article-bottom {
+  padding: 3% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.article-card:hover .article-card-left {
+  background-size: 110%;
+  background-position: center;
+}
+
+.article-card-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+}
+
+.article-card-right-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-family: "Satoshi-Variable";
+  color: gray;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+.article-card-right-top img {
+  border-radius: 50%;
+  width: 25px;
+}
+
+.article-card-left {
+  width: 391px;
+  height: 200px;
+  position: relative;
+  background-size: 103%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 500ms ease;
+  padding: 1%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.article-card-left .date-div {
+  background-color: white;
+  width: 52px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.article-card-left .date-div p {
+  font-family: "Satoshi-Variable";
+  font-weight: 500;
+  font-size: 20x;
+}
+.article-card-left .article-btn-div button {
+  font-weight: bold;
+}
+
+.article-card-right-bottom h1 {
+  font-family: "ClashDisplay-Regular";
+  font-size: 38px;
+  cursor: pointer;
+}
+
+.article-card-btn button {
+  width: 141px;
+  height: 41px;
+}
+
+.posts-main {
+  border-bottom: 2px solid #5E6821;
+}
+
+.posts-top {
+  margin-top: 100px;
+}
+.posts-top p {
+  font-family: "ClashDisplay-Regular";
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.posts-bottom {
+  padding: 5% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.post-card-main {
+  width: 200px;
+  height: 200px;
+}
+.post-card-main:hover .likeAndComment {
+  visibility: visible;
+  transform: translateY(-50px);
+  opacity: 1;
+}
+
+.post-card {
+  width: 200px;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  transition: 200ms;
+  cursor: pointer;
+}
+.post-card:hover {
+  filter: brightness(50%);
+}
+
+.likeAndComment {
+  visibility: hidden;
+  opacity: 0;
+  transition: 300ms;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+.likeAndComment div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  padding: 5%;
+  color: white;
+  font-family: "Satoshi-Variable";
+}
+.likeAndComment div i {
+  font-size: x-large;
+}
+.likeAndComment div p {
+  font-size: large;
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 500px;
+  padding: 4%;
+}
+footer .footer-left {
+  width: 40%;
+  height: 100%;
+  border-right: 2px solid #5E6821;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .footer-left img {
+  width: 60%;
+}
+footer .footer-left p {
+  font-family: "ClashDisplay-Regular";
+  font-size: 24px;
+  font-weight: 600;
+}
+footer .footer-left span {
+  font-family: "Satoshi-Variable";
+  color: gray;
+  font-size: 16px;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.input-div input {
+  border: none;
+  background-color: #E8E6DB;
+  width: 300px;
+  height: 50px;
+  padding: 2%;
+}
+.input-div button {
+  height: 50px;
+  width: 120px;
+}
+
+.social-media-div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.social-media-div button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #5E6821;
+  background-color: transparent;
+}
+.social-media-div button i {
+  color: #5E6821;
+  font-size: large;
+}
+
+.footer-right {
+  width: 60%;
+  padding: 1% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-right div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-right div p {
+  font-family: "ClashDisplay-Regular";
+  font-size: 24px;
+  font-weight: bold;
+}
+.footer-right div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style-type: none;
+  font-family: "Satoshi-Variable";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.scrollBtn {
+  visibility: hidden;
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: gray;
+  cursor: pointer;
+  padding: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0.9;
+  transform: translateX(100px);
+  transition: 300ms;
 }
 
 /*# sourceMappingURL=style.css.map */

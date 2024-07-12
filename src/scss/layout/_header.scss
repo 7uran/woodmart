@@ -48,10 +48,8 @@ header {
     padding: 1% 5%;
     @include flex(row, space-between, center);
 
-    font-family: "SatoshiVariable",
-        Arial,
-        Helvetica,
-        sans-serif;
+    font-family: 'Satoshi-Variable';
+
 
 
     .header-main {

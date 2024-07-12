@@ -1,0 +1,77 @@
+@import "../utils/variables";
+.posts-main{
+border-bottom:2px solid $main_color;
+}
+.posts-top {
+    margin-top: 100px;
+
+    p {
+        font-family: "ClashDisplay-Regular";
+        font-size: 28px;
+        font-weight: 600;
+    }
+}
+
+.posts-bottom {
+    padding: 5% 0;
+    @include flex(row, space-between)
+
+}
+
+.post-card-main {
+    width: 200px;
+    height: 200px;
+    
+
+    &:hover {
+        .likeAndComment {
+            visibility: visible;
+            transform: translateY(-50px);
+            opacity: 1;
+
+        }
+    }
+}
+
+.post-card {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    transition: 200ms;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(50%);
+    }
+
+}
+
+.likeAndComment {
+    visibility: hidden;
+    opacity: 0;
+    transition: 300ms;
+    width: 100%;
+    @include flex(row, space-between, end);
+
+
+
+    div {
+        @include flex(row, null, center);
+        gap: 5px;
+
+        padding: 5%;
+        color: white;
+        font-family: 'Satoshi-Variable';
+
+        i {
+            font-size: x-large;
+        }
+
+        p {
+            font-size: large;
+            font-weight: bold;
+        }
+    }
+}
