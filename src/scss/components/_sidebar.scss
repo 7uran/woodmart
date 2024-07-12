@@ -37,7 +37,7 @@
     }
 
     span {
-        font-family: "SatoshiVariable", Arial, Helvetica, sans-serif;
+        font-family: "Satoshi-Variable";
         font-weight: 500;
     }
 }
@@ -47,7 +47,7 @@
 
     width: 100%;
     height: 250px;
-    @include flex(column, center, center);
+    @include flex(column, null, center);
     gap: 18px;
 
     i {
@@ -60,7 +60,7 @@
         font-weight: 600;
     }
 
-    
+
 }
 
 .return-btn {
@@ -74,4 +74,56 @@
     &:hover {
         background-color: #495019;
     }
-}   
+}
+
+.item {
+    cursor: pointer;
+    transition: 300ms;
+    span{
+        color: rgb(164, 164, 164);
+    }
+    &:hover{
+        background-color: #F8F8F8;
+    }
+    width: 100%;
+    @include flex(row, null, start);
+
+    i {
+        font-size: small;
+        color: black;
+        cursor: pointer;
+    }
+
+}
+
+.item-left {
+
+    padding: 5%;
+
+    img {
+        width: 70px;
+
+    }
+}
+
+.item-right {
+
+    padding: 5% 0%;
+    @include flex(column, start);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+
+    .item-right-bottom {
+        font-family: 'Satoshi-Variable';
+        font-weight: 500;
+        color: $main_color;
+    }
+
+
+
+}
+
+.item-delete{
+    padding: 5% 2%;
+}

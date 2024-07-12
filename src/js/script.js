@@ -106,9 +106,6 @@ getData(BASE_URL, "cards")
       let card = document.createElement('div');
       card.classList.add('card', item.itemId);
 
-
-
-
       let action_div = document.createElement('div');
       action_div.classList.add('action-div');
       action_div.setAttribute('action_id', item.itemId);
@@ -119,17 +116,15 @@ getData(BASE_URL, "cards")
       card_top.appendChild(action_div);
       card.appendChild(card_top);
 
-
       let card_bottom = document.createElement('div');
       card_bottom.classList.add('card-bottom');
       card_bottom.innerHTML = `
           <p>${item.name}</p>
           <div class="stars"></div>
           <span>$${item.price}.00</span>
-          <button>Select options</button>
+          <button class="addToCardBtn-${item.itemId}">Select options</button>
       `;
       card.appendChild(card_bottom);
-
 
       let stars = card_bottom.querySelector('.stars');
       for (let i = 0; i < item.stars; i++) {
@@ -138,7 +133,6 @@ getData(BASE_URL, "cards")
       for (let j = 0; j < (5 - item.stars); j++) {
         stars.innerHTML += `<i class="fa-regular fa-star"></i>`;
       }
-
 
       card.addEventListener("mouseover", () => {
         card_top.style.backgroundImage = `url(${item.zoomImage})`;
@@ -152,25 +146,27 @@ getData(BASE_URL, "cards")
         action_div.style.transform = "translateX(20px)";
       });
 
-
       let delete_btn = document.createElement('button');
-
       delete_btn.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
       let fav_btn = document.createElement('button');
-      fav_btn.innerHTML = '<i class="fa-regular fa-heart"></i>'
+      fav_btn.innerHTML = '<i class="fa-regular fa-heart"></i>';
       delete_btn.addEventListener("click", () => {
-
-        deleteData(item.itemId, "cards")
+        deleteData(item.itemId, "cards");
       });
       action_div.appendChild(delete_btn);
       action_div.appendChild(fav_btn);
 
       card_main.appendChild(card);
+
+      let addBtn = card.querySelector(`.addToCardBtn-${item.itemId}`);
+      addBtn.addEventListener("click", () => {
+        let storedItems = JSON.parse(localStorage.getItem("items")) || [];
+        storedItems.push(item);
+        localStorage.setItem("items", JSON.stringify(storedItems));
+        fillbasket();
+      });
     });
-
-
-
-  })
+  });
 
 async function deleteData(id, endpoint) {
   try {
@@ -188,3 +184,79 @@ async function deleteData(id, endpoint) {
     console.error("Error deleting data:", error);
   }
 }
+fillbasket();
+
+let storage = JSON.parse(localStorage.getItem('items')) || [];
+
+function fillbasket() {
+  const basket = document.querySelector(".sidebar-empty");
+  let storage = JSON.parse(localStorage.getItem('items')) || [];
+  let itemCounts = {};
+  let totalItemCount = 0;
+  let totalItemPrice = 0
+  let basketDiv = document.querySelector(".openbtn");
+  storage.forEach(item => {
+    if (itemCounts[item.itemId]) {
+      itemCounts[item.itemId].count += 1;
+    } else {
+      itemCounts[item.itemId] = { ...item, count: 1 };
+    }
+    totalItemCount += 1;
+    totalItemPrice = totalItemPrice + item.price;
+
+  });
+
+  basketDiv.innerHTML = ` <i class="fa-solid fa-bag-shopping"></i>
+                    <p>
+                        <span>${totalItemCount}</span>
+                        /
+                        <span>$${totalItemPrice}.00</span>
+                    </p>`;
+  console.log(totalItemCount);
+  basket.innerHTML = "";
+  Object.values(itemCounts).forEach((item) => {
+    basket.innerHTML += `
+    <div class="item">
+                         <div class="item-left"><img
+                                 src="${item.image}">
+                         </div>
+                         <div class="item-right">
+                             <div class="item-right-top">
+                                 <p>${item.name} </p>
+                             </div>
+                             <div class="item-right-bottom">
+                                 <p><span>${item.count} x </span> $${item.price}</p>
+                             </div>
+                         </div>
+                         <div class="item-delete-${item.itemId}"> <i class="fa-solid fa-x"></i></div>
+                     </div>
+    `;
+  });
+
+  if (basket.innerHTML == "") {
+    basket.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>
+
+                    <p>No products in the cart.</p>
+                    <button class="return-btn">Return To Shop</button>`
+    basket.style.justifyContent = "center";
+  }
+  else {
+    basket.style.removeProperty("justify-content");
+  }
+  storage.forEach((item) => {
+    let deleteBtn = document.querySelector(`.item-delete-${item.itemId}`);
+    let itemIdToRemove = item.itemId;
+    if (deleteBtn) {
+      deleteBtn.addEventListener("click", () => {
+        storage = storage.filter(item => item.itemId !== itemIdToRemove);
+        localStorage.setItem('items', JSON.stringify(storage));
+        deleteBtn.parentElement.remove();
+        fillbasket();
+      });
+    }
+  });
+}
+
+
+
+
