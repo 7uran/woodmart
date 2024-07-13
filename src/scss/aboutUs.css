@@ -362,7 +362,7 @@ header .header-right div:hover {
   font-display: swap;
   font-style: italic;
 }
-.btn, .input-div button {
+.btn, .contactus-div .contactus-div-left button, .input-div button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -370,7 +370,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .input-div button:hover {
+.btn:hover, .contactus-div .contactus-div-left button:hover, .input-div button:hover {
   background-color: #495019;
 }
 
@@ -564,6 +564,106 @@ footer .footer-left span {
 .images-div .card img {
   width: 400px;
   pointer-events: none;
+}
+
+.contactus-div {
+  padding: 6% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contactus-div .contactus-div-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 30%;
+}
+.contactus-div .contactus-div-left h1 {
+  font-family: "ClashDisplay-Regular";
+  font-size: 48px;
+}
+.contactus-div .contactus-div-left p {
+  font-family: "Satoshi-Variable";
+  font-size: 16px;
+}
+.contactus-div .contactus-div-left button {
+  width: fit-content;
+  padding: 3% 5%;
+}
+
+.contactus-div-right {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 20px;
+  width: 65%;
+}
+.contactus-div-right .member-card {
+  width: 450px;
+  height: 600px;
+  padding: 3%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  overflow: hidden;
+}
+.contactus-div-right .member-card:hover img {
+  transform: scale(1.1);
+}
+.contactus-div-right .member-card img {
+  position: absolute;
+  width: 450px;
+  height: 600px;
+  left: 0;
+  top: 0;
+  transition: 400ms;
+}
+.contactus-div-right .member-card:hover {
+  background-size: 110%;
+}
+.contactus-div-right .member-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 30%);
+  pointer-events: none;
+}
+.contactus-div-right .member-card .member-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 2;
+}
+.contactus-div-right .member-card .member-info h2 {
+  font-family: "ClashDisplay-Regular";
+  color: white;
+  font-size: 28px;
+}
+.contactus-div-right .member-card .member-info p {
+  color: gray;
+  font-family: "Satoshi-Variable";
+  font-size: 16px;
+  font-weight: 500;
+}
+.contactus-div-right .member-card .member-info button {
+  cursor: pointer;
+  background-color: rgba(96, 96, 96, 0.8);
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+}
+.contactus-div-right .member-card .member-info button i {
+  color: white;
+  opacity: 1;
+  font-size: large;
 }
 
 /*# sourceMappingURL=aboutUs.css.map */

@@ -88,7 +88,7 @@
     @include flex(row, );
     gap: 50px;
     user-select: none;
-    
+
 
     .card {
         img {
@@ -98,4 +98,117 @@
 
         }
     }
+}
+
+.contactus-div {
+    padding: 6% 0;
+    @include flex(row, space-between);
+
+    .contactus-div-left {
+        @include flex(column);
+        gap: 20px;
+        width: 30%;
+
+        h1 {
+            font-family: "ClashDisplay-Regular";
+            font-size: 48px;
+        }
+
+        p {
+            font-family: 'Satoshi-Variable';
+            font-size: 16px;
+        }
+
+        button {
+            @extend .btn;
+            width: fit-content;
+            padding: 3% 5%;
+        }
+    }
+}
+
+.contactus-div-right {
+    @include flex(row,null,end);
+    gap: 20px;  
+    width: 65%;
+
+    .background-img {}
+
+    .member-card {
+
+        width: 450px;
+        height: 600px;
+        padding: 3%;
+        position: relative;
+        @include flex(column, end, center);
+        overflow: hidden;
+     
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            position: absolute;
+            width: 450px;
+            height: 600px;
+            left: 0;
+            top: 0;
+            transition: 400ms;
+        }
+
+        &:hover {
+            background-size: 110%;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 30%);
+            pointer-events: none;
+        }
+
+        .member-info {
+            @include flex(column, center, center);
+            gap: 15px;
+            z-index: 2;
+
+            h2 {
+                font-family: "ClashDisplay-Regular";
+                color: white;
+                font-size: 28px;
+            }
+
+            p {
+                color: gray;
+                font-family: 'Satoshi-Variable';
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            button {
+                cursor: pointer;
+                background-color: rgba(96, 96, 96, 0.8);
+                width: 45px;
+                height: 45px;
+                border: none;
+                border-radius: 50%;
+
+                i {
+                    color: white;
+                    opacity: 1;
+                    font-size: large;
+
+                }
+            }
+        }
+    }
+
+
 }
