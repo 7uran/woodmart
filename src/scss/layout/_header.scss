@@ -3,23 +3,6 @@
 
 
 
-@media only screen and (min-width: 1200px) {
-    header {
-        padding: 0 11%;
-    }
-
-}
-
-;
-
-@media only screen and (min-width: 992px) {
-    header {
-        padding: 0 4%;
-    }
-
-}
-
-;
 
 
 
@@ -45,11 +28,10 @@
 
 header {
     position: relative;
-    padding: 1% 5%;
+    padding: 0% 5%;
     @include flex(row, space-between, center);
-
     font-family: 'Satoshi-Variable';
-
+    font-weight: 500;
 
 
     .header-main {
@@ -74,9 +56,16 @@ header {
                 transition: 300ms;
                 padding: 5% 0;
 
-                &:hover {
-                    color: $main_color;
+                a {
+                    color: black;
+                    text-decoration: none;
+                    transition: 300ms;
+                    &:hover {
+                        color: $main_color;
+                    }
                 }
+
+
             }
 
             i {

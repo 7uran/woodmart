@@ -25,16 +25,6 @@ section {
   padding: 0% 5%;
 }
 
-@media only screen and (min-width: 1200px) {
-  header {
-    padding: 0 11%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  header {
-    padding: 0 4%;
-  }
-}
 .is-sticky {
   position: fixed;
   background-color: #F6F3ED;
@@ -53,12 +43,13 @@ section {
 
 header {
   position: relative;
-  padding: 1% 5%;
+  padding: 0% 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-family: "Satoshi-Variable";
+  font-weight: 500;
 }
 header .header-main {
   display: flex;
@@ -86,7 +77,12 @@ header .header-left ul li {
   transition: 300ms;
   padding: 5% 0;
 }
-header .header-left ul li:hover {
+header .header-left ul li a {
+  color: black;
+  text-decoration: none;
+  transition: 300ms;
+}
+header .header-left ul li a:hover {
   color: #5E6821;
 }
 header .header-left ul i {
@@ -307,7 +303,7 @@ header .header-right div:hover {
   font-display: swap;
   font-style: italic;
 }
-.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .swiper-slide .info button {
+.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .sidebar-bottom button, .swiper-slide .info button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -315,7 +311,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
+.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .sidebar-bottom button:hover, .swiper-slide .info button:hover {
   background-color: #495019;
 }
 
@@ -431,7 +427,7 @@ header .header-right div:hover {
   gap: 10px;
 }
 
-.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .swiper-slide .info button {
+.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .sidebar-bottom button, .swiper-slide .info button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -439,7 +435,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
+.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .sidebar-bottom button:hover, .swiper-slide .info button:hover {
   background-color: #495019;
 }
 
@@ -600,7 +596,7 @@ header .header-right div:hover {
   transform: scale(1.1);
 }
 
-.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .swiper-slide .info button {
+.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .sidebar-bottom button, .swiper-slide .info button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -608,7 +604,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
+.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .sidebar-bottom button:hover, .swiper-slide .info button:hover {
   background-color: #495019;
 }
 
@@ -632,7 +628,6 @@ header .header-right div:hover {
   top: 0;
   right: 0;
   background-color: white;
-  overflow-x: hidden;
   transition: 0.3s;
   z-index: 11111;
 }
@@ -668,12 +663,22 @@ header .header-right div:hover {
 }
 
 .sidebar-empty {
+  overflow-x: scroll;
   width: 100%;
-  height: 250px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
+}
+.sidebar-empty::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar-empty::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.sidebar-empty::-webkit-scrollbar-thumb {
+  background: #D5D5D5;
 }
 .sidebar-empty i {
   font-size: 80px;
@@ -740,6 +745,36 @@ header .header-right div:hover {
 
 .item-delete {
   padding: 5% 2%;
+}
+
+.sidebar-bottom {
+  background-color: white;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 5%;
+  font-family: "Satoshi-Variable";
+  font-size: larger;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar-bottom .price-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-bottom .price-div p {
+  font-weight: 600;
+}
+.sidebar-bottom .price-div p:nth-child(2) {
+  color: #5E6821;
+}
+.sidebar-bottom button {
+  width: 100%;
+  height: 50px;
 }
 
 .shopping-top p {
@@ -890,7 +925,7 @@ header .header-right div:hover {
   transition: 300ms;
 }
 
-.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .swiper-slide .info button {
+.btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .swiper-slide .info button, .sidebar-bottom button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -898,7 +933,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover {
+.btn:hover, .input-div button:hover, .article-card-btn button:hover, .article-card-left .article-btn-div button:hover, .products-div .products-top .products-top-right button:hover, .swiper-slide .info button:hover, .sidebar-bottom button:hover {
   background-color: #495019;
 }
 
@@ -1034,23 +1069,6 @@ header .header-right div:hover {
   font-size: large;
 }
 
-.articles-main {
-  border-bottom: 2px solid #5E6821;
-}
-.articles-main .article-top {
-  border-bottom: 2px solid #5E6821;
-  padding: 2% 0;
-}
-.articles-main .article-top h2 {
-  font-family: "ClashDisplay-Regular";
-}
-.articles-main .article-bottom {
-  padding: 3% 0;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-}
-
 .article-card {
   display: flex;
   flex-direction: row;
@@ -1131,12 +1149,26 @@ header .header-right div:hover {
   height: 41px;
 }
 
-.posts-main {
+.article-bottom {
+  padding: 3% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.articles-main {
   border-bottom: 2px solid #5E6821;
+}
+.articles-main .article-top {
+  border-bottom: 2px solid #5E6821;
+  padding: 2% 0;
+}
+.articles-main .article-top h2 {
+  font-family: "ClashDisplay-Regular";
 }
 
 .posts-top {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .posts-top p {
   font-family: "ClashDisplay-Regular";
@@ -1205,8 +1237,16 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 500px;
   padding: 4%;
+}
+footer .footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 2px solid #5E6821;
+  border-bottom: 2px solid #5E6821;
+  padding: 4% 0;
 }
 footer .footer-left {
   width: 40%;

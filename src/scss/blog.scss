@@ -1,0 +1,28 @@
+@import "../scss/base/reset";
+@import "../scss/layout/header";
+@import "../scss/components/dropdown";
+@import "../scss/fonts/font";
+@import "../scss/components/articleCards";
+@import "../scss/utils/extends";
+@import "../scss/layout/footer";
+
+
+.blog-main {
+    padding: 2% 0;
+    @include flex(column);
+    gap: 20px;
+
+    .blog-top {
+        h1 {
+            font-family: "ClashDisplay-Regular";
+            color: $main_color;
+            font-weight: 600;
+            font-size: 28px;
+        }
+    }
+
+    .blog-bottom {
+        @include flex(column);
+        gap: 20px;
+    }
+}

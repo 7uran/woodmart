@@ -1,0 +1,81 @@
+@import "../scss/base/reset";
+@import "../scss/layout/header";
+@import "../scss/components/dropdown";
+@import "../scss/fonts/font";
+@import "../scss/utils/extends";
+@import "../scss/layout/footer";
+
+
+.intro {
+    font-family: "ClashDisplay-Regular";
+
+    .title-div {
+        color: $main_color;
+        padding: 2% 0;
+    }
+
+    .welcome-main {
+        .welcome-div {
+            h1 {
+                font-size: 68px;
+                font-weight: 600;
+
+            }
+        }
+
+        .intro-img-div {
+            padding: 2% 0;
+            @include flex(null, center, center)
+        }
+    }
+}
+
+.info-div {
+    padding: 3% 0;
+    @include flex(row, space-between, flex-start);
+
+    .info-div-left {
+        width: 40%;
+        @include flex(column);
+        gap: 20px;
+
+        h1 {
+            font-family: "ClashDisplay-Regular";
+            font-size: 48px;
+        }
+
+        p {
+            color: gray;
+            font-family: 'Satoshi-Variable';
+        }
+    }
+
+    .info-div-right {
+        width: 50%;
+
+        @include flex(column);
+
+        .date-div {
+            border-bottom: 2px solid $main_color;
+            @include flex(row, space-between, center);
+            padding: 4% 0;
+
+            &:nth-child(1) {
+                border-top: 2px solid $main_color;
+            }
+
+            p {
+                font-family: "ClashDisplay-Regular";
+                font-size: 28px;
+                font-weight: 600;
+            }
+
+            span {
+                font-family: "ClashDisplay-Regular";
+                font-size: 48px;
+                font-weight: bold;
+                color: #bbbb;
+            }
+        }
+    }
+}

@@ -1,0 +1,582 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F6F3ED;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main,
+footer,
+.header-main {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 0% 5%;
+}
+
+.is-sticky {
+  position: fixed;
+  background-color: #F6F3ED;
+  padding: 0% 5%;
+  animation: slideDown 0.35s ease-out;
+  width: 100%;
+  z-index: 10000;
+  box-shadow: 0px 1px rgb(200, 200, 200);
+}
+.is-sticky .header-main {
+  border-bottom: none;
+}
+.is-sticky .header-left li {
+  padding: 2% 0;
+}
+
+header {
+  position: relative;
+  padding: 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Satoshi-Variable";
+  font-weight: 500;
+}
+header .header-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid #5E6821;
+  padding: 1% 0;
+  color: #333;
+}
+header .header-left {
+  justify-self: flex-start;
+}
+header .header-left ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+}
+header .header-left ul li {
+  cursor: pointer;
+  transition: 300ms;
+  padding: 5% 0;
+}
+header .header-left ul li a {
+  color: black;
+  text-decoration: none;
+  transition: 300ms;
+}
+header .header-left ul li a:hover {
+  color: #5E6821;
+}
+header .header-left ul i {
+  color: gray;
+}
+header .header-mid img {
+  width: 200px;
+  cursor: pointer;
+}
+header .header-right {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: fit-content;
+}
+header .header-right i {
+  font-size: large;
+}
+header .header-right div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  transition: 300ms;
+  cursor: pointer;
+}
+header .header-right div:hover {
+  color: gray;
+}
+
+.shop-li:hover .dropdown {
+  visibility: visible;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.dropdown {
+  display: flex;
+  visibility: hidden;
+  padding: 2% 15%;
+  width: 100%;
+  margin-top: 1%;
+  left: 0;
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  flex-direction: row;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 300ms;
+}
+
+.dropdown-card-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 150px;
+}
+
+.dropdown-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.dropdown-card p {
+  color: black;
+  font-family: "ClashDisplay-Regular";
+  font-weight: 500;
+}
+.dropdown-card .img-div {
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.dropdown-card img {
+  transition: 400ms;
+  width: 80px;
+  border-radius: 50%;
+}
+.dropdown-card img:hover {
+  transform: scale(1.1);
+}
+
+@font-face {
+  font-family: "ClashDisplay-Extralight";
+  src: url("../fonts/ClashDisplay-Extralight.woff2") format("woff2"), url("../fonts/ClashDisplay-Extralight.woff") format("woff"), url("../fonts/ClashDisplay-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Light";
+  src: url("../fonts/ClashDisplay-Light.woff2") format("woff2"), url("../fonts/ClashDisplay-Light.woff") format("woff"), url("../fonts/ClashDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Regular";
+  src: url("../fonts/ClashDisplay-Regular.woff2") format("woff2"), url("../fonts/ClashDisplay-Regular.woff") format("woff"), url("../fonts/ClashDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Medium";
+  src: url("../fonts/ClashDisplay-Medium.woff2") format("woff2"), url("../fonts/ClashDisplay-Medium.woff") format("woff"), url("../fonts/ClashDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("../fonts/ClashDisplay-Semibold.woff2") format("woff2"), url("../fonts/ClashDisplay-Semibold.woff") format("woff"), url("../fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ClashDisplay-Bold";
+  src: url("../fonts/ClashDisplay-Bold.woff2") format("woff2"), url("../fonts/ClashDisplay-Bold.woff") format("woff"), url("../fonts/ClashDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+  * This is a variable font
+  * You can control variable axes as shown below:
+  * font-variation-settings: wght 700.0;
+  *
+  * available axes:
+  'wght' (range from 200.0 to 700.0
+  */
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: url("../fonts/ClashDisplay-Variable.woff2") format("woff2"), url("../fonts/ClashDisplay-Variable.woff") format("woff"), url("../fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+* @license
+*
+* Font Family: Satoshi
+* Designed by: Deni Anggara
+* URL: https://www.fontshare.com/fonts/satoshi
+* © 2024 Indian Type Foundry
+*
+* Satoshi Light 
+* Satoshi LightItalic 
+* Satoshi Regular 
+* Satoshi Italic 
+* Satoshi Medium 
+* Satoshi MediumItalic 
+* Satoshi Bold 
+* Satoshi BoldItalic 
+* Satoshi Black 
+* Satoshi BlackItalic 
+* Satoshi Variable (Variable font)
+* Satoshi VariableItalic (Variable font)
+
+*
+*/
+@font-face {
+  font-family: "Satoshi-Light";
+  src: url("../fonts/Satoshi-Light.woff2") format("woff2"), url("../fonts/Satoshi-Light.woff") format("woff"), url("../fonts/Satoshi-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-LightItalic";
+  src: url("../fonts/Satoshi-LightItalic.woff2") format("woff2"), url("../fonts/Satoshi-LightItalic.woff") format("woff"), url("../fonts/Satoshi-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Regular";
+  src: url("../fonts/Satoshi-Regular.woff2") format("woff2"), url("../fonts/Satoshi-Regular.woff") format("woff"), url("../fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-Italic";
+  src: url("../fonts/Satoshi-Italic.woff2") format("woff2"), url("../fonts/Satoshi-Italic.woff") format("woff"), url("../fonts/Satoshi-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Medium";
+  src: url("../fonts/Satoshi-Medium.woff2") format("woff2"), url("../fonts/Satoshi-Medium.woff") format("woff"), url("../fonts/Satoshi-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-MediumItalic";
+  src: url("../fonts/Satoshi-MediumItalic.woff2") format("woff2"), url("../fonts/Satoshi-MediumItalic.woff") format("woff"), url("../fonts/Satoshi-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Bold";
+  src: url("../fonts/Satoshi-Bold.woff2") format("woff2"), url("../fonts/Satoshi-Bold.woff") format("woff"), url("../fonts/Satoshi-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BoldItalic";
+  src: url("../fonts/Satoshi-BoldItalic.woff2") format("woff2"), url("../fonts/Satoshi-BoldItalic.woff") format("woff"), url("../fonts/Satoshi-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi-Black";
+  src: url("../fonts/Satoshi-Black.woff2") format("woff2"), url("../fonts/Satoshi-Black.woff") format("woff"), url("../fonts/Satoshi-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi-BlackItalic";
+  src: url("../fonts/Satoshi-BlackItalic.woff2") format("woff2"), url("../fonts/Satoshi-BlackItalic.woff") format("woff"), url("../fonts/Satoshi-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: italic;
+}
+/**
+   * This is a variable font
+   * You can control variable axes as shown below:
+   * font-variation-settings: wght 900.0;
+   *
+   * available axes:
+   'wght' (range from 300.0 to 900.0
+   */
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../fonts/Satoshi-Variable.woff2") format("woff2"), url("../fonts/Satoshi-Variable.woff") format("woff"), url("../fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+/**
+   * This is a variable font
+   * You can control variable axes as shown below:
+   * font-variation-settings: wght 900.0;
+   *
+   * available axes:
+   'wght' (range from 300.0 to 900.0
+   */
+@font-face {
+  font-family: "Satoshi-VariableItalic";
+  src: url("../fonts/Satoshi-VariableItalic.woff2") format("woff2"), url("../fonts/Satoshi-VariableItalic.woff") format("woff"), url("../fonts/Satoshi-VariableItalic.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
+.article-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.article-card:hover .article-card-left {
+  background-size: 110%;
+  background-position: center;
+}
+
+.article-card-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+}
+
+.article-card-right-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  font-family: "Satoshi-Variable";
+  color: gray;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+}
+.article-card-right-top img {
+  border-radius: 50%;
+  width: 25px;
+}
+
+.article-card-left {
+  width: 391px;
+  height: 200px;
+  position: relative;
+  background-size: 103%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 500ms ease;
+  padding: 1%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.article-card-left .date-div {
+  background-color: white;
+  width: 52px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.article-card-left .date-div p {
+  font-family: "Satoshi-Variable";
+  font-weight: 500;
+  font-size: 20x;
+}
+.article-card-left .article-btn-div button {
+  font-weight: bold;
+}
+
+.article-card-right-bottom h1 {
+  font-family: "ClashDisplay-Regular";
+  font-size: 38px;
+  cursor: pointer;
+}
+
+.article-card-btn button {
+  width: 141px;
+  height: 41px;
+}
+
+.article-bottom {
+  padding: 3% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.btn, .input-div button, .article-card-left .article-btn-div button, .article-card-btn button {
+  padding: 1.5% 1.8%;
+  background-color: #5E6821;
+  color: white;
+  border: none;
+  transition: 300ms;
+  cursor: pointer;
+}
+.btn:hover, .input-div button:hover, .article-card-left .article-btn-div button:hover, .article-card-btn button:hover {
+  background-color: #495019;
+}
+
+.card-btn {
+  padding: 4% 5%;
+  background-color: #5E6821;
+  color: white;
+  border: none;
+  transition: 300ms;
+  cursor: pointer;
+}
+.card-btn:hover {
+  background-color: #495019;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4%;
+}
+footer .footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 2px solid #5E6821;
+  border-bottom: 2px solid #5E6821;
+  padding: 4% 0;
+}
+footer .footer-left {
+  width: 40%;
+  height: 100%;
+  border-right: 2px solid #5E6821;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .footer-left img {
+  width: 60%;
+}
+footer .footer-left p {
+  font-family: "ClashDisplay-Regular";
+  font-size: 24px;
+  font-weight: 600;
+}
+footer .footer-left span {
+  font-family: "Satoshi-Variable";
+  color: gray;
+  font-size: 16px;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.input-div input {
+  border: none;
+  background-color: #E8E6DB;
+  width: 300px;
+  height: 50px;
+  padding: 2%;
+}
+.input-div button {
+  height: 50px;
+  width: 120px;
+}
+
+.social-media-div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.social-media-div button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #5E6821;
+  background-color: transparent;
+}
+.social-media-div button i {
+  color: #5E6821;
+  font-size: large;
+}
+
+.footer-right {
+  width: 60%;
+  padding: 1% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footer-right div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-right div p {
+  font-family: "ClashDisplay-Regular";
+  font-size: 24px;
+  font-weight: bold;
+}
+.footer-right div ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style-type: none;
+  font-family: "Satoshi-Variable";
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.blog-main {
+  padding: 2% 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog-main .blog-top h1 {
+  font-family: "ClashDisplay-Regular";
+  color: #5E6821;
+  font-weight: 600;
+  font-size: 28px;
+}
+.blog-main .blog-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*# sourceMappingURL=blog.css.map */

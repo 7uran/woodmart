@@ -51,10 +51,12 @@ const action_btn = document.querySelector(".action-div button");
 
 document.querySelector(".openbtn").addEventListener("click", () => {
   document.querySelector("#mySidebar").style.width = "350px";
+ 
 
 })
 document.querySelector(".closebtn").addEventListener("click", () => {
   document.querySelector("#mySidebar").style.width = "0";
+
 
 })
 
@@ -190,6 +192,8 @@ let storage = JSON.parse(localStorage.getItem('items')) || [];
 
 function fillbasket() {
   const basket = document.querySelector(".sidebar-empty");
+  const sideBarBottom = document.querySelector(".sidebar-bottom");
+
   let storage = JSON.parse(localStorage.getItem('items')) || [];
   let itemCounts = {};
   let totalItemCount = 0;
@@ -212,7 +216,6 @@ function fillbasket() {
                         /
                         <span>$${totalItemPrice}.00</span>
                     </p>`;
-  console.log(totalItemCount);
   basket.innerHTML = "";
   Object.values(itemCounts).forEach((item) => {
     basket.innerHTML += `
@@ -238,10 +241,16 @@ function fillbasket() {
 
                     <p>No products in the cart.</p>
                     <button class="return-btn">Return To Shop</button>`
+
     basket.style.justifyContent = "center";
   }
   else {
     basket.style.removeProperty("justify-content");
+    sideBarBottom.innerHTML = `<div class="price-div">
+    <p>Subtotal:</p>
+    <p>$${totalItemPrice}.00</p>
+    </div>
+    <div><button>Checkout</button></div>`
   }
   storage.forEach((item) => {
     let deleteBtn = document.querySelector(`.item-delete-${item.itemId}`);

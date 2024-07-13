@@ -1,4 +1,5 @@
 @import "../utils/variables";
+@import "../components/articleCards";
 
 .articles-main {
 border-bottom: 2px solid $main_color;
@@ -12,104 +13,8 @@ border-bottom: 2px solid $main_color;
         }
     }
 
-    .article-bottom {
-        padding: 3% 0;
-        @include flex(column);
-        gap: 50px;
-    }
+  
 }
 
 
 
-.article-card {
-
-    &:hover .article-card-left {
-        background-size: 110%;
-        background-position: center;
-    }
-
-    @include flex(row, null, center);
-    gap: 10px;
-}
-
-.article-card-right {
-    @include flex(row, space-between, center);
-    gap: 17px;
-
-    width: 100%;
-
-}
-
-.article-card-right-top {
-    @include flex(row, null, center);
-    gap: 10px;
-    font-family: 'Satoshi-Variable';
-    color: gray;
-    font-weight: 600;
-    cursor: pointer;
-    width: fit-content;
-
-    img {
-        border-radius: 50%;
-        width: 25px;
-    }
-}
-
-.article-card-left {
-
-    width: 391px;
-    height: 200px;
-    position: relative;
-    background-size: 103%;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: 500ms ease;
-    padding: 1%;
-    cursor: pointer;
-    @include flex(column, space-between);
-
-    .date-div {
-        background-color: white;
-        width: 52px;
-        height: 55px;
-        @include flex(null, center, center);
-        text-align: center;
-        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-
-        p {
-            font-family: 'Satoshi-Variable';
-            font-weight: 500;
-            font-size: 20x;
-        }
-
-    }
-
-    .article-btn-div {
-
-        button {
-            @extend .btn;
-            font-weight: bold;
-        }
-
-    }
-}
-
-.article-card-right-bottom {
-    h1 {
-        font-family: "ClashDisplay-Regular";
-        font-size: 38px;
-        cursor: pointer;
-    }
-}
-
-.article-card-btn {
-
-
-    button {
-        @extend .btn;
-        width: 141px;
-        height: 41px;
-
-    }
-
-}

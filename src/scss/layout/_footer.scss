@@ -1,7 +1,16 @@
 footer {
     @include flex(row, space-between);
-    height: 500px;
+
     padding: 4%;
+
+    .footer-wrapper {
+        @include flex(row, space-between);
+        width: 100%;
+        border-top: 2px solid $main_color;
+        border-bottom: 2px solid $main_color ;
+        padding: 4% 0;
+
+    }
 
     .footer-left {
         width: 40%;
@@ -73,15 +82,13 @@ footer {
     @include flex(row, space-between, );
 
     div {
+        @include flex(column);
+        gap: 20px;
         p {
             font-family: "ClashDisplay-Regular";
             font-size: 24px;
             font-weight: bold;
         }
-
-        @include flex(column);
-        gap: 20px;
-
         ul {
             @include flex(column);
             gap: 15px;
