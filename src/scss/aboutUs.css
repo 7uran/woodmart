@@ -25,6 +25,16 @@ section {
   padding: 0% 5%;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .is-sticky {
   position: fixed;
   background-color: #F6F3ED;
@@ -493,7 +503,7 @@ footer .footer-left span {
 }
 
 .info-div {
-  padding: 3% 0;
+  padding: 6% 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -539,6 +549,21 @@ footer .footer-left span {
   font-size: 48px;
   font-weight: bold;
   color: rgba(187, 187, 187, 0.7333333333);
+}
+
+.images-div {
+  padding-bottom: 5%;
+  border-bottom: 2px solid #5E6821;
+  scrollbar-width: none;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  user-select: none;
+}
+.images-div .card img {
+  width: 400px;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=aboutUs.css.map */

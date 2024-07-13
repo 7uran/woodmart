@@ -25,6 +25,16 @@ section {
   padding: 0% 5%;
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .is-sticky {
   position: fixed;
   background-color: #F6F3ED;

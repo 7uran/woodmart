@@ -1,44 +1,9 @@
 new Swiper(".mySwiper", {});
 
-const header = document.querySelector("header");
-const toggleClass = "is-sticky";
-
-window.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
-  if (currentScroll > 150) {
-    header.classList.add(toggleClass);
-  } else {
-    header.classList.remove(toggleClass);
-  }
-});
 
 
-let mouseDown = false;
-let startX, scrollLeft;
-const slider = document.querySelector('.card-main-div');
 
-const startDragging = (e) => {
-  mouseDown = true;
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-}
 
-const stopDragging = (e) => {
-  mouseDown = false;
-}
-
-const move = (e) => {
-  e.preventDefault();
-  if (!mouseDown) { return; }
-  const x = e.pageX - slider.offsetLeft;
-  const scroll = x - startX;
-  slider.scrollLeft = scrollLeft - scroll;
-}
-
-slider.addEventListener('mousemove', move, false);
-slider.addEventListener('mousedown', startDragging, false);
-slider.addEventListener('mouseup', stopDragging, false);
-slider.addEventListener('mouseleave', stopDragging, false);
 
 
 const card_img = document.querySelector(".card-top img");

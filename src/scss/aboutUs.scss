@@ -31,7 +31,7 @@
 }
 
 .info-div {
-    padding: 3% 0;
+    padding: 6% 0;
     @include flex(row, space-between, flex-start);
 
     .info-div-left {
@@ -76,6 +76,26 @@
                 font-weight: bold;
                 color: #bbbb;
             }
+        }
+    }
+}
+
+.images-div {
+    padding-bottom: 5%;
+    border-bottom: 2px solid $main_color;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    @include flex(row, );
+    gap: 50px;
+    user-select: none;
+    
+
+    .card {
+        img {
+
+            width: 400px;
+            pointer-events: none;
+
         }
     }
 }
