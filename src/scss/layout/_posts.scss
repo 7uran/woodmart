@@ -18,7 +18,9 @@
 .post-card-main {
     width: 200px;
     height: 200px;
-    
+    @media (max-width: 768px) {
+        font-size: 27px;
+    }
 
     &:hover {
         .likeAndComment {

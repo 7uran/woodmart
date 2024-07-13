@@ -60,6 +60,11 @@
         transition: 300ms;
         @include flex();
 
+        @media (max-width: 768px) {
+            width: 200px;
+            height: 250px;
+        }
+
         &:hover {
             background-image: url("https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-1-1-351x401.jpg");
             background-repeat: no-repeat;

@@ -123,6 +123,18 @@ header .header-right div {
 header .header-right div:hover {
   color: gray;
 }
+@media (max-width: 768px) {
+  header .header-left, header .header-right {
+    display: none;
+  }
+  header .header-main {
+    justify-content: center;
+    padding: 0;
+  }
+  header .header-mid img {
+    transform: translateX(0);
+  }
+}
 
 .shop-li:hover .dropdown {
   visibility: visible;
@@ -343,6 +355,11 @@ header .header-right div:hover {
   align-items: center;
   padding: 2% 0%;
 }
+@media (max-width: 768px) {
+  .intro-main {
+    padding: 8% 4%;
+  }
+}
 .intro-main .intro-left {
   font-size: xx-large;
   font-family: "ClashDisplay-Regular";
@@ -353,6 +370,11 @@ header .header-right div:hover {
   gap: 45px;
   width: fit-content;
   height: 100%;
+}
+@media (max-width: 768px) {
+  .intro-main .intro-left {
+    display: none;
+  }
 }
 .intro-main .intro-left p {
   cursor: pointer;
@@ -370,11 +392,22 @@ header .header-right div:hover {
   width: 2px;
   background-color: #5E6821;
 }
+@media (max-width: 768px) {
+  .vl {
+    display: none;
+  }
+}
 
 .swiper {
   cursor: grab;
   width: 72%;
   height: 600px;
+}
+@media (max-width: 768px) {
+  .swiper {
+    width: 360px;
+    height: 430px;
+  }
 }
 
 .swiper1 {
@@ -413,17 +446,34 @@ header .header-right div:hover {
   padding: 4%;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .swiper-slide .info {
+    width: 100%;
+    height: 430px;
+  }
+}
 .swiper-slide .info h1 {
   font-family: "ClashDisplay-Regular";
   font-weight: 600;
-  font-size: 36px;
+  font-size: 38px;
   width: 48%;
+}
+@media (max-width: 768px) {
+  .swiper-slide .info h1 {
+    width: 100%;
+    font-size: 20px;
+  }
 }
 .swiper-slide .info h3 {
   font-family: "Satoshi-Variable";
   font-size: 16px;
   width: 50%;
   font-weight: 300;
+}
+@media (max-width: 768px) {
+  .swiper-slide .info h3 {
+    width: 100%;
+  }
 }
 .swiper-slide .info p {
   font-family: "Satoshi-Variable";
@@ -432,6 +482,19 @@ header .header-right div:hover {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+@media (max-width: 768px) {
+  .swiper-slide .info div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .swiper-slide .info div img {
+    width: 80px;
+  }
+  .swiper-slide .info div p {
+    font-size: 15px;
+  }
 }
 
 .btn, .input-div button, .article-card-btn button, .article-card-left .article-btn-div button, .products-div .products-top .products-top-right button, .sidebar-bottom button, .swiper-slide .info button {
@@ -507,6 +570,12 @@ header .header-right div:hover {
   background-repeat: no-repeat;
   transition: 300ms;
   display: flex;
+}
+@media (max-width: 768px) {
+  .card .card-top {
+    width: 200px;
+    height: 250px;
+  }
 }
 .card .card-top:hover {
   background-image: url("https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-1-1-351x401.jpg");
@@ -789,6 +858,11 @@ header .header-right div:hover {
   font-weight: 600;
   font-size: 30px;
 }
+@media (max-width: 768px) {
+  .shopping-top {
+    display: none;
+  }
+}
 
 .shopping-bottom {
   display: flex;
@@ -804,6 +878,11 @@ header .header-right div:hover {
   position: relative;
   background-color: #000;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .video-card {
+    display: none;
+  }
 }
 
 .video-card video {
@@ -856,6 +935,11 @@ header .header-right div:hover {
   font-weight: bold;
   height: 600px;
 }
+@media (max-width: 768px) {
+  .explore-div {
+    font-size: 27px;
+  }
+}
 
 .comment-div {
   padding: 6% 0;
@@ -864,6 +948,12 @@ header .header-right div:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .comment-div {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 .comment-left-top {
@@ -903,6 +993,12 @@ header .header-right div:hover {
 .comment-right {
   width: fit-content;
   position: relative;
+}
+@media (max-width: 768px) {
+  .comment-right div img {
+    width: 200px;
+    height: auto;
+  }
 }
 .comment-right div {
   display: flex;
@@ -1193,6 +1289,11 @@ header .header-right div:hover {
 .post-card-main {
   width: 200px;
   height: 200px;
+}
+@media (max-width: 768px) {
+  .post-card-main {
+    font-size: 27px;
+  }
 }
 .post-card-main:hover .likeAndComment {
   visibility: visible;

@@ -5,6 +5,9 @@
     width: 100%;
     margin-top: -200px;
     @include flex(row, space-between);
+    @media (max-width: 768px) {
+        @include flex(column-reverse);
+    }
 
 }
 
@@ -45,7 +48,15 @@
 .comment-right {
     width: fit-content;
     position: relative;
+    @media (max-width: 768px) {
+       div{
+        img{
+            width: 200px;
+            height:auto;
 
+        }
+       }
+    }
     div {
         @include flex(null, center, center);
     }

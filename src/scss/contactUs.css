@@ -123,6 +123,18 @@ header .header-right div {
 header .header-right div:hover {
   color: gray;
 }
+@media (max-width: 768px) {
+  header .header-left, header .header-right {
+    display: none;
+  }
+  header .header-main {
+    justify-content: center;
+    padding: 0;
+  }
+  header .header-mid img {
+    transform: translateX(0);
+  }
+}
 
 .shop-li:hover .dropdown {
   visibility: visible;

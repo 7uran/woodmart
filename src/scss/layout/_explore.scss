@@ -13,5 +13,12 @@
     color: white;
     font-weight: bold;
     height: 600px;
+   
+    p{
+        
+    }
+    @media (max-width: 768px) {
+        font-size: 27px;
+    }
 
 }
