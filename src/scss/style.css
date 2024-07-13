@@ -54,10 +54,6 @@ section {
 header {
   position: relative;
   padding: 0% 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   font-family: "Satoshi-Variable";
   font-weight: 500;
 }
@@ -101,6 +97,7 @@ header .header-left ul i {
 header .header-mid img {
   width: 200px;
   cursor: pointer;
+  transform: translateX(-40px);
 }
 header .header-right {
   justify-self: flex-end;
@@ -1308,6 +1305,14 @@ footer .footer-left span {
   border-radius: 50%;
   border: 2px solid #5E6821;
   background-color: transparent;
+  cursor: pointer;
+  transition: 300ms;
+}
+.social-media-div button:hover {
+  background-color: #5E6821;
+}
+.social-media-div button:hover i {
+  color: white;
 }
 .social-media-div button i {
   color: #5E6821;
@@ -1339,6 +1344,13 @@ footer .footer-left span {
   font-family: "Satoshi-Variable";
   font-size: 16px;
   font-weight: 500;
+}
+.footer-right div ul li {
+  transition: 300ms;
+  cursor: pointer;
+}
+.footer-right div ul li:hover {
+  color: #5E6821;
 }
 
 .scrollBtn {

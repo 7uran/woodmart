@@ -359,7 +359,7 @@ header .header-right div:hover {
   font-display: swap;
   font-style: italic;
 }
-.btn, .contactus-div .contactus-div-left button, .input-div button {
+.btn, .contactus-main .contactus-left .writeMsg-btn, .input-div button {
   padding: 1.5% 1.8%;
   background-color: #5E6821;
   color: white;
@@ -367,7 +367,7 @@ header .header-right div:hover {
   transition: 300ms;
   cursor: pointer;
 }
-.btn:hover, .contactus-div .contactus-div-left button:hover, .input-div button:hover {
+.btn:hover, .contactus-main .contactus-left .writeMsg-btn:hover, .input-div button:hover {
   background-color: #495019;
 }
 
@@ -496,186 +496,101 @@ footer .footer-left span {
   color: #5E6821;
 }
 
-.intro {
+.contactus-main .title-div {
+  padding: 2% 0;
+}
+.contactus-main .title-div h1 {
   font-family: "ClashDisplay-Regular";
-}
-.intro .title-div {
   color: #5E6821;
-  padding: 2% 0;
 }
-.intro .welcome-main .welcome-div h1 {
-  font-size: 68px;
-  font-weight: 600;
-}
-.intro .welcome-main .intro-img-div {
-  padding: 2% 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.info-div {
-  padding: 6% 0;
+.contactus-main .contactus {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  padding-top: 3%;
+  padding-bottom: 6%;
 }
-.info-div .info-div-left {
-  width: 40%;
+.contactus-main .contactus-left {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 45%;
 }
-.info-div .info-div-left h1 {
+.contactus-main .contactus-left h1 {
   font-family: "ClashDisplay-Regular";
-  font-size: 48px;
+  font-size: 68px;
 }
-.info-div .info-div-left p {
-  color: gray;
-  font-family: "Satoshi-Variable";
-}
-.info-div .info-div-right {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-}
-.info-div .info-div-right .date-div {
-  border-bottom: 2px solid #5E6821;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 4% 0;
-}
-.info-div .info-div-right .date-div:nth-child(1) {
-  border-top: 2px solid #5E6821;
-}
-.info-div .info-div-right .date-div p {
-  font-family: "ClashDisplay-Regular";
-  font-size: 28px;
-  font-weight: 600;
-}
-.info-div .info-div-right .date-div span {
-  font-family: "ClashDisplay-Regular";
-  font-size: 48px;
-  font-weight: bold;
-  color: rgba(187, 187, 187, 0.7333333333);
-}
-
-.images-div {
-  padding-bottom: 5%;
-  border-bottom: 2px solid #5E6821;
-  scrollbar-width: none;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: row;
-  gap: 50px;
-  user-select: none;
-}
-.images-div .card img {
-  width: 400px;
-  pointer-events: none;
-}
-
-.contactus-div {
-  padding: 6% 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.contactus-div .contactus-div-left {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 30%;
-}
-.contactus-div .contactus-div-left h1 {
-  font-family: "ClashDisplay-Regular";
-  font-size: 48px;
-}
-.contactus-div .contactus-div-left p {
+.contactus-main .contactus-left p {
   font-family: "Satoshi-Variable";
   font-size: 16px;
+  color: gray;
+  font-weight: 500;
 }
-.contactus-div .contactus-div-left button {
+.contactus-main .contactus-left p span {
+  color: #5E6821;
+  font-weight: 600;
+}
+.contactus-main .contactus-left .writeMsg-btn {
+  padding: 2% 3%;
   width: fit-content;
-  padding: 3% 5%;
+}
+.contactus-main .contactus-left .social-media button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #5E6821;
+  color: #5E6821;
+}
+.contactus-main .contactus-left .social-media button i {
+  font-size: 18px;
 }
 
-.contactus-div-right {
+.contactus-right img {
+  width: 600px;
+}
+
+.info-card {
+  border-top: 2px solid #5E6821;
+  padding-top: 2%;
+  padding-bottom: 5%;
   display: flex;
   flex-direction: row;
-  align-items: end;
-  gap: 20px;
-  width: 65%;
+  justify-content: space-between;
 }
-.contactus-div-right .member-card {
-  width: 450px;
-  height: 600px;
-  padding: 3%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: center;
-  overflow: hidden;
+.info-card .card-first {
+  width: 20%;
 }
-.contactus-div-right .member-card:hover img {
-  transform: scale(1.1);
-}
-.contactus-div-right .member-card img {
-  position: absolute;
-  width: 450px;
-  height: 600px;
-  left: 0;
-  top: 0;
-  transition: 400ms;
-}
-.contactus-div-right .member-card:hover {
-  background-size: 110%;
-}
-.contactus-div-right .member-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 30%);
-  pointer-events: none;
-}
-.contactus-div-right .member-card .member-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  z-index: 2;
-}
-.contactus-div-right .member-card .member-info h2 {
+.info-card .card-first h1 {
   font-family: "ClashDisplay-Regular";
-  color: white;
-  font-size: 28px;
+  font-size: 48px;
 }
-.contactus-div-right .member-card .member-info p {
-  color: gray;
+.info-card .card-first h1 i {
+  transform: rotate(-45deg);
+}
+.info-card .card-second {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.info-card .card-second p {
   font-family: "Satoshi-Variable";
   font-size: 16px;
   font-weight: 500;
 }
-.contactus-div-right .member-card .member-info button {
-  cursor: pointer;
-  background-color: rgba(96, 96, 96, 0.8);
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
+.info-card .card-third {
+  font-family: "Satoshi-Variable";
+  font-size: 16px;
+  font-weight: 500;
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
-.contactus-div-right .member-card .member-info button i {
-  color: white;
-  opacity: 1;
-  font-size: large;
+.info-card .card-fourth {
+  font-family: "Satoshi-Variable";
+  font-size: 16px;
+  font-weight: 500;
 }
 
-/*# sourceMappingURL=aboutUs.css.map */
+/*# sourceMappingURL=contactUs.css.map */

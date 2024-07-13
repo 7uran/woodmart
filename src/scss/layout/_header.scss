@@ -34,9 +34,10 @@
 }
 
 header {
+   
     position: relative;
     padding: 0% 5%;
-    @include flex(row, space-between, center);
+    // @include flex(row, space-between, center);
     font-family: 'Satoshi-Variable';
     font-weight: 500;
 
@@ -87,6 +88,7 @@ header {
         img {
             width: 200px;
             cursor: pointer;
+            transform: translateX(-40px);
         }
     }
 

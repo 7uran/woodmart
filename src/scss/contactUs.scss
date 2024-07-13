@@ -1,0 +1,128 @@
+@import "../scss/base/reset";
+@import "../scss/layout/header";
+@import "../scss/components/dropdown";
+@import "../scss/fonts/font";
+@import "../scss/utils/extends";
+@import "../scss/layout/footer";
+
+
+.contactus-main {
+
+    .title-div {
+        padding: 2% 0;
+
+        h1 {
+            font-family: "ClashDisplay-Regular";
+            color: $main_color;
+        }
+
+
+    }
+
+    .contactus {
+        @include flex(row, space-between, flex-start);
+        padding-top: 3%;
+        padding-bottom: 6%;
+    }
+
+    .contactus-left {
+        @include flex(column);
+        gap: 20px;
+
+        width: 45%;
+
+        h1 {
+            font-family: "ClashDisplay-Regular";
+            font-size: 68px;
+        }
+
+        p {
+            font-family: 'Satoshi-Variable';
+            font-size: 16px;
+            color: gray;
+            font-weight: 500;
+
+            span {
+                color: $main_color;
+                font-weight: 600;
+            }
+        }
+
+        .writeMsg-btn {
+            @extend .btn;
+            padding: 2% 3%;
+            width: fit-content;
+        }
+
+        .social-media {
+            button {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 2px solid $main_color;
+                color: $main_color;
+
+                i {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+.contactus-right {
+    img {
+        width: 600px;
+    }
+}
+
+
+
+.info-card {
+border-top: 2px solid $main_color;
+padding-top: 2%;
+padding-bottom: 5%;
+
+    @include flex(row, space-between);
+
+    .card-first {
+        width: 20%;
+
+
+        h1 {
+            font-family: "ClashDisplay-Regular";
+            font-size: 48px;
+
+            i {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .card-second {
+  
+        p {
+            font-family: 'Satoshi-Variable';
+            font-size: 16px;
+            font-weight: 500;
+        }
+        @include flex(column);
+        gap: 25px;
+    }
+
+    .card-third {
+        font-family: 'Satoshi-Variable';
+        font-size: 16px;
+        font-weight: 500;
+        color: gray;
+        @include flex(column);
+        gap: 25px;
+    }
+
+    .card-fourth {
+        font-family: 'Satoshi-Variable';
+        font-size: 16px;
+        font-weight: 500;
+
+    }
+}

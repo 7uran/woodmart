@@ -208,6 +208,7 @@ function fillbasket() {
                     <button class="return-btn">Return To Shop</button>`
 
     basket.style.justifyContent = "center";
+    sideBarBottom.innerHTML = ""
   }
   else {
     basket.style.removeProperty("justify-content");
@@ -220,6 +221,7 @@ function fillbasket() {
   storage.forEach((item) => {
     let deleteBtn = document.querySelector(`.item-delete-${item.itemId}`);
     let itemIdToRemove = item.itemId;
+    totalItemPrice=totalItemPrice-item.price;
     if (deleteBtn) {
       deleteBtn.addEventListener("click", () => {
         storage = storage.filter(item => item.itemId !== itemIdToRemove);

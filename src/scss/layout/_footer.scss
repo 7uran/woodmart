@@ -54,6 +54,7 @@ footer {
         @extend .btn;
         height: 50px;
         width: 120px;
+        
     }
 }
 
@@ -67,7 +68,14 @@ footer {
         border-radius: 50%;
         border: 2px solid $main_color;
         background-color: transparent;
-
+        cursor: pointer;
+        transition: 300ms;
+        &:hover{
+            background-color: $main_color;
+            i{
+                color: white;
+            }
+        }
         i {
             color: $main_color;
             font-size: large;
@@ -96,6 +104,15 @@ footer {
             font-family: 'Satoshi-Variable';
             font-size: 16px;
             font-weight: 500;
+            
+            li{
+                transition: 300ms;
+                cursor: pointer;
+                &:hover{
+                    color: $main_color;
+
+                }
+            }
         }
     }
 }
