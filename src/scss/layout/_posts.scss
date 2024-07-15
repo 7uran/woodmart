@@ -2,6 +2,7 @@
 
 .posts-top {
     margin-top: 50px;
+
     p {
         font-family: "ClashDisplay-Regular";
         font-size: 28px;
@@ -11,13 +12,21 @@
 
 .posts-bottom {
     padding: 5% 0;
-    @include flex(row, space-between)
+    @include flex(row, space-between);
+
+    @media (max-width: 768px) {
+        max-width: 768px;
+        overflow: hidden;
+
+
+    }
 
 }
 
 .post-card-main {
     width: 200px;
     height: 200px;
+
     @media (max-width: 768px) {
         font-size: 27px;
     }

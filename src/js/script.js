@@ -137,7 +137,7 @@ getData(BASE_URL, "cards")
 
 async function deleteData(id, endpoint) {
   try {
-    const response = await fetch(`${BASE_URL}/${endpoint}?itemId=${id}`, {
+    const response = await fetch(`${BASE_URL}/${endpoint}/${id}`, {
       method: "DELETE"
     });
     console.log(response);

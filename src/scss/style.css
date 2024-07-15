@@ -47,6 +47,11 @@ section {
 .is-sticky .header-main {
   border-bottom: none;
 }
+@media (max-width: 768px) {
+  .is-sticky .header-main {
+    max-width: 768px;
+  }
+}
 .is-sticky .header-left li {
   padding: 2% 0;
 }
@@ -1083,6 +1088,14 @@ header .header-right div:hover {
   flex-direction: row;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .products-bottom {
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 
 .product-card {
   width: fit-content;
@@ -1269,6 +1282,25 @@ header .header-right div:hover {
 .articles-main .article-top h2 {
   font-family: "ClashDisplay-Regular";
 }
+@media (max-width: 768px) {
+  .articles-main .article-card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .articles-main .article-card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-card-right-bottom h1 {
+    font-size: 24px;
+  }
+}
 
 .posts-top {
   margin-top: 50px;
@@ -1284,6 +1316,12 @@ header .header-right div:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .posts-bottom {
+    max-width: 768px;
+    overflow: hidden;
+  }
 }
 
 .post-card-main {
@@ -1356,6 +1394,13 @@ footer .footer-wrapper {
   border-bottom: 2px solid #5E6821;
   padding: 4% 0;
 }
+@media (max-width: 768px) {
+  footer .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
 footer .footer-left {
   width: 40%;
   height: 100%;
@@ -1363,6 +1408,12 @@ footer .footer-left {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media (max-width: 768px) {
+  footer .footer-left {
+    width: 100%;
+    border: none;
+  }
 }
 footer .footer-left img {
   width: 60%;
@@ -1427,10 +1478,24 @@ footer .footer-left span {
   flex-direction: row;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .footer-right {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 .footer-right div {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .footer-right div {
+    width: 100%;
+  }
 }
 .footer-right div p {
   font-family: "ClashDisplay-Regular";

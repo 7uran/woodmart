@@ -1,6 +1,8 @@
 footer {
     @include flex(row, space-between);
 
+
+
     padding: 4%;
 
     .footer-wrapper {
@@ -10,6 +12,10 @@ footer {
         border-bottom: 2px solid $main_color ;
         padding: 4% 0;
 
+        @media (max-width: 768px) {
+            @include flex(column, space-between);
+        }
+
     }
 
     .footer-left {
@@ -18,6 +24,11 @@ footer {
         border-right: 2px solid $main_color;
         @include flex(column);
         gap: 30px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            border: none;
+        }
 
         img {
             width: 60%;
@@ -54,7 +65,7 @@ footer {
         @extend .btn;
         height: 50px;
         width: 120px;
-        
+
     }
 }
 
@@ -70,12 +81,15 @@ footer {
         background-color: transparent;
         cursor: pointer;
         transition: 300ms;
-        &:hover{
+
+        &:hover {
             background-color: $main_color;
-            i{
+
+            i {
                 color: white;
             }
         }
+
         i {
             color: $main_color;
             font-size: large;
@@ -89,14 +103,29 @@ footer {
     padding: 1% 5%;
     @include flex(row, space-between, );
 
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 0;
+        @include flex(row,space-between);
+        
+    }
+
     div {
+        @media (max-width: 768px) {
+            width: 100%;
+            
+
+        }
+
         @include flex(column);
         gap: 20px;
+
         p {
             font-family: "ClashDisplay-Regular";
             font-size: 24px;
             font-weight: bold;
         }
+
         ul {
             @include flex(column);
             gap: 15px;
@@ -104,11 +133,12 @@ footer {
             font-family: 'Satoshi-Variable';
             font-size: 16px;
             font-weight: 500;
-            
-            li{
+
+            li {
                 transition: 300ms;
                 cursor: pointer;
-                &:hover{
+
+                &:hover {
                     color: $main_color;
 
                 }

@@ -12,7 +12,27 @@ border-bottom: 2px solid $main_color;
             font-family: "ClashDisplay-Regular";
         }
     }
+    .article-card{
+        @media (max-width: 768px) {
+            @include flex(column)
+        }
+    }
+    .article-card-right{
+        @media (max-width: 768px) {
+            @include flex(column,null,start);
+          
+        }
+    }
 
+  
+}
+
+.article-card-right-bottom{
+    h1{
+        @media (max-width: 768px) {
+            font-size: 24px;
+         }
+    }
   
 }
 

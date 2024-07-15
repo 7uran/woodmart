@@ -35,7 +35,12 @@
 
 .products-bottom {
     padding: 2% 0;
-    @include flex(row,space-between);
+    @include flex(row, space-between);
+
+    @media (max-width: 768px) {
+        width: 768px;
+        @include flex(column, space-between);
+    }
 
 }
 
@@ -43,6 +48,7 @@
 .product-card {
     width: fit-content;
     user-select: none;
+
 
 
     .product-card-top {
@@ -101,13 +107,16 @@
     .product-card-bottom {
 
         @include flex(column, null, center);
-        p{
+
+        p {
             font-family: "ClashDisplay-Regular";
         }
-        span{
+
+        span {
             font-family: 'Satoshi-Variable';
             color: $main_color;
         }
+
         button {
             @extend .card-btn;
         }
