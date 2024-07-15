@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "json-server db.json --watch --port 8080",
+    "start": "json-server db.json --watch --port 3000",
     "watch": "sass --watch src/scss/style.scss:src/scss/style.css",
     "watchBlog": "sass --watch src/scss/blog.scss:src/scss/blog.css",
     "watchAboutUs": "sass --watch src/scss/aboutUs.scss:src/scss/aboutUs.css",

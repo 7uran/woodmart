@@ -51,7 +51,7 @@ btn.addEventListener("click", () => {
 
 
 
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "http://localhost:3000";
 const card_main = document.querySelector(".card-main-div");
 
 async function getData(url, endpoint) {
@@ -71,14 +71,14 @@ getData(BASE_URL, "cards")
     data.forEach(item => {
 
       let card = document.createElement('div');
-      card.classList.add('card', item.itemId);
+      card.classList.add('card', item.id);
 
       let action_div = document.createElement('div');
       action_div.classList.add('action-div');
-      action_div.setAttribute('action_id', item.itemId);
+      action_div.setAttribute('action_id', item.id);
 
       let card_top = document.createElement('div');
-      card_top.classList.add('card-top', item.itemId);
+      card_top.classList.add('card-top', item.id);
       card_top.style.backgroundImage = `url(${item.image})`;
       card_top.appendChild(action_div);
       card.appendChild(card_top);
@@ -89,7 +89,7 @@ getData(BASE_URL, "cards")
           <p>${item.name}</p>
           <div class="stars"></div>
           <span>$${item.price}.00</span>
-          <button class="addToCardBtn-${item.itemId}">Select options</button>
+          <button class="addToCardBtn-${item.id}">Select options</button>
       `;
       card.appendChild(card_bottom);
 
@@ -118,14 +118,14 @@ getData(BASE_URL, "cards")
       let fav_btn = document.createElement('button');
       fav_btn.innerHTML = '<i class="fa-regular fa-heart"></i>';
       delete_btn.addEventListener("click", () => {
-        deleteData(item.itemId, "cards");
+        deleteData(item.id, "cards");
       });
       action_div.appendChild(delete_btn);
       action_div.appendChild(fav_btn);
 
       card_main.appendChild(card);
 
-      let addBtn = card.querySelector(`.addToCardBtn-${item.itemId}`);
+      let addBtn = card.querySelector(`.addToCardBtn-${item.id}`);
       addBtn.addEventListener("click", () => {
         let storedItems = JSON.parse(localStorage.getItem("items")) || [];
         storedItems.push(item);
@@ -165,10 +165,10 @@ function fillbasket() {
   let totalItemPrice = 0
   let basketDiv = document.querySelector(".openbtn");
   storage.forEach(item => {
-    if (itemCounts[item.itemId]) {
-      itemCounts[item.itemId].count += 1;
+    if (itemCounts[item.id]) {
+      itemCounts[item.id].count += 1;
     } else {
-      itemCounts[item.itemId] = { ...item, count: 1 };
+      itemCounts[item.id] = { ...item, count: 1 };
     }
     totalItemCount += 1;
     totalItemPrice = totalItemPrice + item.price;
@@ -196,7 +196,7 @@ function fillbasket() {
                                  <p><span>${item.count} x </span> $${item.price}</p>
                              </div>
                          </div>
-                         <div class="item-delete-${item.itemId}"> <i class="fa-solid fa-x"></i></div>
+                         <div class="item-delete-${item.id}"> <i class="fa-solid fa-x"></i></div>
                      </div>
     `;
   });
@@ -219,12 +219,12 @@ function fillbasket() {
     <div><button>Checkout</button></div>`
   }
   storage.forEach((item) => {
-    let deleteBtn = document.querySelector(`.item-delete-${item.itemId}`);
-    let itemIdToRemove = item.itemId;
+    let deleteBtn = document.querySelector(`.item-delete-${item.id}`);
+    let itemIdToRemove = item.id;
     totalItemPrice=totalItemPrice-item.price;
     if (deleteBtn) {
       deleteBtn.addEventListener("click", () => {
-        storage = storage.filter(item => item.itemId !== itemIdToRemove);
+        storage = storage.filter(item => item.id !== itemIdToRemove);
         localStorage.setItem('items', JSON.stringify(storage));
         deleteBtn.parentElement.remove();
         fillbasket();

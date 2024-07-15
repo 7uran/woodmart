@@ -1,7 +1,7 @@
 {
     "cards": [
         {
-            "itemId": "2381",
+            "id": "2381",
             "name": "Golden Petra",
             "stars": 3,
             "image": "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-1-4.jpg",
@@ -9,7 +9,7 @@
             "price": 79
         },
         {
-            "itemId": "3456234578",
+            "id": "3456234578",
             "name": "Peperomia Obtusifolia",
             "stars": 5,
             "image": "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-8-0-351x401.jpg",
@@ -17,7 +17,7 @@
             "price": 135
         },
         {
-            "itemId": "34587678",
+            "id": "34587678",
             "name": "Pink Rubber Plant",
             "stars": 3,
             "image": "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-medium-3-0-351x401.jpg",
@@ -25,7 +25,7 @@
             "price": 66
         },
         {
-            "itemId": "34564678",
+            "id": "34564678",
             "name": "Ficus Audrey",
             "stars": 2,
             "image": "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-medium-7-0-351x401.jpg",
@@ -33,7 +33,7 @@
             "price": 139
         },
         {
-            "itemId": "341235678",
+            "id": "341235678",
             "name": "Schefflera Tree",
             "stars": 4,
             "image": "https://woodmart.xtemos.com/plants/wp-content/uploads/sites/12/2023/05/w-indoor-plants-small-10-0-351x401.jpg",
